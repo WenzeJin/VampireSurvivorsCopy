@@ -1,0 +1,5 @@
+/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject.dir
+/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject_autogen_timestamp_deps.dir
+/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject_autogen.dir
