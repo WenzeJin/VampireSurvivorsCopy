@@ -4,10 +4,23 @@
 
 #ifndef VSCPROJECT_PERSON_H
 #define VSCPROJECT_PERSON_H
+#include <QLabel>
+#include <QWidget>
+#include <QProgressBar>
+#include "Weapon.h"
 
 
 class Person {
+    int HP;
+    int position[2];
+    bool alive;
+    Weapon weapon;
+    QLabel label;
+    QProgressBar HP_bar;
+    const QWidget * parent;
 
+public:
+    
 };
 
 

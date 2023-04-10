@@ -6,8 +6,10 @@
 #define VSCPROJECT_PLAYER_H
 #include "Person.h"
 
-class Player : public Person {
 
+class Player : public Person {
+    int EXP;
+    QProgressBar EXP_bar;
 };
 
 

@@ -4,9 +4,15 @@
 
 #ifndef VSCPROJECT_WEAPON_H
 #define VSCPROJECT_WEAPON_H
+#include "Bullet.h"
+#include "GlobalVariables.h"
+
 
 
 class Weapon {
+    int damage;
+    BulletCategories bullet_cate;
+public:
 
 };
 

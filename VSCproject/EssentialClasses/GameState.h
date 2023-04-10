@@ -14,6 +14,8 @@
 #include "GameMap.h"
 #include "GameRule.h"
 #include "GlobalVariables.h"
+#include <QWidget>
+#include <string>
 
 #define INIT_DEFAULT_PLAYER
 #define INIT_DEFAULT_MAP
@@ -25,18 +27,23 @@ class GameState {
     std::list<Bullet> GS_bullets;   //用于保存场上的子弹信息
     GameMap GS_map;                 //用于指定地图
     GameRule GS_rule;               //用于指定游戏难度与规则
+    const QWidget * QW_parent;
 
 public:
 
     GameState();        //默认构造
     GameState(PlayerCategories pc, MapCategories mc);
+    void set_parent(const QWidget * p);
 
     bool game_over();    //返回游戏是否结束（依赖GS_rule）
-    void tick();        //运行游戏的一个时钟tick
+    void tick();         //运行游戏的一个时钟tick
 
     void add_enemy(EnemyCategories ec);     //向游戏中添加一个敌人
     void add_bullet(const Person &shooter, const Person &target);   //向游戏中添加一个子弹
     void set_gamerule(GameRule &temp);
+
+    void store(const std::string &filename);        //存储游戏数据
+    void load(const std::string &filename);         //加载游戏数据
 
 };
 

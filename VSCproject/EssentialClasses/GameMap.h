@@ -4,9 +4,15 @@
 
 #ifndef VSCPROJECT_GAMEMAP_H
 #define VSCPROJECT_GAMEMAP_H
+#include <vector>
 
 
 class GameMap {
+    int boundary[4];
+    int scale[2];
+    std::vector<int> map_elements;
+
+public:
 
 };
 
