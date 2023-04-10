@@ -281,9 +281,27 @@
 			null
 		],
 		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameRule.h",
+			"MU",
+			"NOUUWFSCJR/moc_GameRule.cpp",
+			null
+		],
+		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameState.h",
 			"MU",
 			"NOUUWFSCJR/moc_GameState.cpp",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GlobalVariables.h",
+			"MU",
+			"NOUUWFSCJR/moc_GlobalVariables.cpp",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Person.h",
+			"MU",
+			"NOUUWFSCJR/moc_Person.cpp",
 			null
 		],
 		[
@@ -372,7 +390,17 @@
 			null
 		],
 		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameRule.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameState.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Person.cpp",
 			"MU",
 			null
 		],

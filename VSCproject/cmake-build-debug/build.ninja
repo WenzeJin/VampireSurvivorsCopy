@@ -113,6 +113,22 @@ build CMakeFiles/VSCproject.dir/EssentialClasses/Weapon.cpp.o: CXX_COMPILER__VSC
   OBJECT_DIR = CMakeFiles/VSCproject.dir
   OBJECT_FILE_DIR = CMakeFiles/VSCproject.dir/EssentialClasses
 
+build CMakeFiles/VSCproject.dir/EssentialClasses/Person.cpp.o: CXX_COMPILER__VSCproject_Debug /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Person.cpp || cmake_object_order_depends_target_VSCproject
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/VSCproject.dir/EssentialClasses/Person.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/include -isystem /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Headers -iframework /Applications/Qt/6.4.1/macos/lib -isystem /Applications/Qt/6.4.1/macos/mkspecs/macx-clang -isystem /Applications/Qt/6.4.1/macos/include -isystem /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Headers -isystem /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/VSCproject.dir
+  OBJECT_FILE_DIR = CMakeFiles/VSCproject.dir/EssentialClasses
+
+build CMakeFiles/VSCproject.dir/EssentialClasses/GameRule.cpp.o: CXX_COMPILER__VSCproject_Debug /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameRule.cpp || cmake_object_order_depends_target_VSCproject
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/VSCproject.dir/EssentialClasses/GameRule.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/include -isystem /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Headers -iframework /Applications/Qt/6.4.1/macos/lib -isystem /Applications/Qt/6.4.1/macos/mkspecs/macx-clang -isystem /Applications/Qt/6.4.1/macos/include -isystem /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Headers -isystem /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/VSCproject.dir
+  OBJECT_FILE_DIR = CMakeFiles/VSCproject.dir/EssentialClasses
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target VSCproject
@@ -121,7 +137,7 @@ build CMakeFiles/VSCproject.dir/EssentialClasses/Weapon.cpp.o: CXX_COMPILER__VSC
 #############################################
 # Link the executable VSCproject
 
-build VSCproject: CXX_EXECUTABLE_LINKER__VSCproject_Debug CMakeFiles/VSCproject.dir/VSCproject_autogen/mocs_compilation.cpp.o CMakeFiles/VSCproject.dir/main.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/GameState.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/GameMap.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Player.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Enemy.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Bullet.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Weapon.cpp.o | /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/QtGui /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore || VSCproject_autogen VSCproject_autogen_timestamp_deps
+build VSCproject: CXX_EXECUTABLE_LINKER__VSCproject_Debug CMakeFiles/VSCproject.dir/VSCproject_autogen/mocs_compilation.cpp.o CMakeFiles/VSCproject.dir/main.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/GameState.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/GameMap.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Player.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Enemy.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Bullet.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Weapon.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/Person.cpp.o CMakeFiles/VSCproject.dir/EssentialClasses/GameRule.cpp.o | /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/QtGui /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore || VSCproject_autogen VSCproject_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Applications/Qt/6.4.1/macos/lib  /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/QtGui  /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal
   LINK_PATH = -F/Applications/Qt/6.4.1/macos/lib

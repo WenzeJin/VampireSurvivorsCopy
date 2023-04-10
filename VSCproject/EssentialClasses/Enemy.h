@@ -4,9 +4,9 @@
 
 #ifndef VSCPROJECT_ENEMY_H
 #define VSCPROJECT_ENEMY_H
+#include "Person.h"
 
-
-class Enemy {
+class Enemy : public Person {
 
 };
 

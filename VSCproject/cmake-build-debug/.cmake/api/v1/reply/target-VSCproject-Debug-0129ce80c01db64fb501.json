@@ -261,7 +261,9 @@
 				6,
 				8,
 				10,
-				12
+				12,
+				15,
+				17
 			]
 		}
 	],
@@ -367,7 +369,9 @@
 				6,
 				8,
 				10,
-				12
+				12,
+				15,
+				17
 			]
 		},
 		{
@@ -379,21 +383,24 @@
 				7,
 				9,
 				11,
-				13
+				13,
+				14,
+				16,
+				18
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				14
+				19
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				15
+				20
 			]
 		}
 	],
@@ -476,6 +483,33 @@
 		{
 			"backtrace" : 1,
 			"path" : "EssentialClasses/Weapon.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "EssentialClasses/GlobalVariables.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "EssentialClasses/Person.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "EssentialClasses/Person.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "EssentialClasses/GameRule.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "EssentialClasses/GameRule.h",
 			"sourceGroupIndex" : 1
 		},
 		{

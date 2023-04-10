@@ -4,9 +4,9 @@
 
 #ifndef VSCPROJECT_PLAYER_H
 #define VSCPROJECT_PLAYER_H
+#include "Person.h"
 
-
-class Player {
+class Player : public Person {
 
 };
 
