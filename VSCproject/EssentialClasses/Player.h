@@ -9,7 +9,12 @@
 
 class Player : public Person {
     int EXP;
+    int level;
     QProgressBar EXP_bar;
+
+public:
+    Player();
+    Player(GameState * gs, QWidget * qp, int position_x, int position_y);
 };
 
 

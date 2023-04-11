@@ -13,7 +13,6 @@
 #include "Bullet.h"
 #include "GameMap.h"
 #include "GameRule.h"
-#include "GlobalVariables.h"
 #include <QWidget>
 #include <string>
 
@@ -32,13 +31,13 @@ class GameState {
 public:
 
     GameState();        //默认构造
-    GameState(PlayerCategories pc, MapCategories mc);
+    GameState(GameRule::PlayerCategories pc, GameRule::MapCategories mc);
     void set_parent(const QWidget * p);
 
     bool game_over();    //返回游戏是否结束（依赖GS_rule）
     void tick();         //运行游戏的一个时钟tick
 
-    void add_enemy(EnemyCategories ec);     //向游戏中添加一个敌人
+    void add_enemy(GameRule::EnemyCategories ec);     //向游戏中添加一个敌人
     void add_bullet(const Person &shooter, const Person &target);   //向游戏中添加一个子弹
     void set_gamerule(GameRule &temp);
 

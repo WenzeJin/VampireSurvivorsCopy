@@ -7,6 +7,7 @@
 #include "Person.h"
 #include <QLabel>
 #include <QWidget>
+#include "GameState.h"
 
 
 class Bullet {
@@ -16,6 +17,7 @@ class Bullet {
     int position[2];
     QLabel label;
     const QWidget * QW_parent;
+    GameState * const GS;
 
 public:
     Bullet();

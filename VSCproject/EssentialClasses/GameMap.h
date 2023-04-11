@@ -6,6 +6,10 @@
 #define VSCPROJECT_GAMEMAP_H
 #include <vector>
 
+/*
+ * 地图元素说明与对应：
+ *
+ */
 
 class GameMap {
     int boundary[4];

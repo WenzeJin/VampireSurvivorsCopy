@@ -8,6 +8,8 @@
 #include <QWidget>
 #include <QProgressBar>
 #include "Weapon.h"
+#include "GameState.h"
+#include "GameRule.h"
 
 
 class Person {
@@ -18,9 +20,18 @@ class Person {
     QLabel label;
     QProgressBar HP_bar;
     const QWidget * parent;
+    GameState * const GS;
+    GameRule * const GR;
+    GameRule::WeaponCategories weapon_cate;
 
 public:
-    
+    static int max_HP;
+    Person();
+    Person(GameState * gs, QWidget * qp, int position_x, int position_y);
+
+    void tick();
+    void damage();
+
 };
 
 

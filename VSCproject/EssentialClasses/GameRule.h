@@ -7,7 +7,14 @@
 
 
 class GameRule {
+public:
+    enum PlayerCategories {};
+    enum MapCategories {};
+    enum EnemyCategories {};
+    enum BulletCategories {};
+    enum WeaponCategories {};
 
+    static int judgeExp(int level);
 };
 
 
