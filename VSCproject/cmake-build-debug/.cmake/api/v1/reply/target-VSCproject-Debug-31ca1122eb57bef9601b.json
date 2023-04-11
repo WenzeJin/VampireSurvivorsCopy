@@ -262,19 +262,19 @@
 				8,
 				10,
 				12,
-				15,
-				17
+				14,
+				16
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "VSCproject_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "VSCproject_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "VSCproject_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "VSCproject::@6890427a1f51a3e7e1df",
@@ -370,8 +370,8 @@
 				8,
 				10,
 				12,
-				15,
-				17
+				14,
+				16
 			]
 		},
 		{
@@ -384,23 +384,22 @@
 				9,
 				11,
 				13,
-				14,
-				16,
-				18
+				15,
+				17
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				19
+				18
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				20
+				19
 			]
 		}
 	],
@@ -483,11 +482,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "EssentialClasses/Weapon.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "EssentialClasses/GlobalVariables.h",
 			"sourceGroupIndex" : 1
 		},
 		{
