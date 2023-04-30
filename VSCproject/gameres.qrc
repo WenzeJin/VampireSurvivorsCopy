@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>Assets/map1_bg.png</file>
+        <file>Assets/hero1.png</file>
+    </qresource>
+</RCC>

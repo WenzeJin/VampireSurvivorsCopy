@@ -14,7 +14,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(VSCproject main.cpp EssentialClasses/GameState.cpp EssentialClasses/GameState.h EssentialClasses/GameMap.cpp EssentialClasses/GameMap.h EssentialClasses/Player.cpp EssentialClasses/Player.h EssentialClasses/Enemy.cpp EssentialClasses/Enemy.h EssentialClasses/Bullet.cpp EssentialClasses/Bullet.h EssentialClasses/Weapon.cpp EssentialClasses/Weapon.h EssentialClasses/Person.cpp EssentialClasses/Person.h EssentialClasses/GameRule.cpp EssentialClasses/GameRule.h)
+add_executable(VSCproject gameres.qrc main.cpp gamemain.cpp gamemain.h gamemain.ui menu.cpp menu.h menu.ui GameLogic/GameState.cpp GameLogic/GameState.h GameLogic/config.h GameLogic/PaintInfo.cpp GameLogic/PaintInfo.h GameLogic/GameMap.cpp GameLogic/GameMap.h GameLogic/Hero.cpp GameLogic/Hero.h GameLogic/Option.cpp GameLogic/Option.h GameLogic/Weapon.cpp GameLogic/Weapon.h)
 target_link_libraries(VSCproject
         Qt::Core
         Qt::Gui

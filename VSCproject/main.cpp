@@ -1,10 +1,10 @@
 #include <QApplication>
 #include <QPushButton>
+#include "menu.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
-    button.resize(200, 100);
-    button.show();
+    Menu * chick_start = new Menu();
+    chick_start->show();
     return QApplication::exec();
 }

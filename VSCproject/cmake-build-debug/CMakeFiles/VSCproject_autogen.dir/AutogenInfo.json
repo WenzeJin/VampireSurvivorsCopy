@@ -255,7 +255,8 @@
 		"/Users/jinwenze/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
 		"/Applications/Qt/6.4.1/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake",
 		"/Applications/Qt/6.4.1/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-relwithdebinfo.cmake",
-		"/Applications/Qt/6.4.1/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake"
+		"/Applications/Qt/6.4.1/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gameres.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject",
 	"DEP_FILE" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/deps",
@@ -263,51 +264,57 @@
 	"HEADERS" : 
 	[
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Bullet.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h",
 			"MU",
-			"NOUUWFSCJR/moc_Bullet.cpp",
+			"EDAMEEOPZ5/moc_GameMap.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Enemy.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.h",
 			"MU",
-			"NOUUWFSCJR/moc_Enemy.cpp",
+			"EDAMEEOPZ5/moc_GameState.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameMap.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Hero.h",
 			"MU",
-			"NOUUWFSCJR/moc_GameMap.cpp",
+			"EDAMEEOPZ5/moc_Hero.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameRule.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Option.h",
 			"MU",
-			"NOUUWFSCJR/moc_GameRule.cpp",
+			"EDAMEEOPZ5/moc_Option.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameState.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/PaintInfo.h",
 			"MU",
-			"NOUUWFSCJR/moc_GameState.cpp",
+			"EDAMEEOPZ5/moc_PaintInfo.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Person.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Weapon.h",
 			"MU",
-			"NOUUWFSCJR/moc_Person.cpp",
+			"EDAMEEOPZ5/moc_Weapon.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Player.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/config.h",
 			"MU",
-			"NOUUWFSCJR/moc_Player.cpp",
+			"EDAMEEOPZ5/moc_config.cpp",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Weapon.h",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.h",
 			"MU",
-			"NOUUWFSCJR/moc_Weapon.cpp",
+			"EWIEGA46WW/moc_gamemain.cpp",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/menu.h",
+			"MU",
+			"EWIEGA46WW/moc_menu.cpp",
 			null
 		]
 	],
@@ -369,47 +376,47 @@
 	"SOURCES" : 
 	[
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Bullet.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Enemy.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameMap.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Hero.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameRule.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Option.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/GameState.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/PaintInfo.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Person.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Weapon.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Player.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/EssentialClasses/Weapon.cpp",
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.cpp",
 			"MU",
 			null
 		],
 		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/menu.cpp",
 			"MU",
 			null
 		]
