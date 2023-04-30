@@ -1,0 +1,23 @@
+{
+	"BUILD_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject",
+	"CMAKE_SOURCE_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject",
+	"INCLUDE_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/include",
+	"INPUTS" : 
+	[
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/map1_bg.png",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/hero1.png"
+	],
+	"LOCK_FILE" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject_autogen.dir/AutoRcc_gameres_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "gameres" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_gameres.cpp",
+	"RCC_EXECUTABLE" : "/Applications/Qt/6.4.1/macos/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject_autogen.dir/AutoRcc_gameres_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gameres.qrc",
+	"VERBOSITY" : 0
+}
