@@ -12,10 +12,13 @@
 #include "PaintInfo.h"
 #include "config.h"
 #include "GameMap.h"
+#include "Enemy.h"
+#include "Weapon.h"
+
+class Weapon;
 
 class Hero {
     //基本属性
-    //TODO：加入Weapon
     int HP_MAX;
     int hp;
     int exp;
@@ -33,7 +36,9 @@ class Hero {
     std::pair<double, double> real_pos;
     QPixmap _image;
     GameMap * map_parent;
-
+    //武器部分
+    int weapon_type;
+    Weapon * _weapon;
 public:
     QRect absolute_rect; //碰撞箱
     QRect real_rect;
@@ -42,10 +47,12 @@ public:
     explicit Hero(int hero_style, QWidget * w_parent, GameMap * m_parent); //一般使用这个
 
     void setWidgetParent(QWidget * parent);
+    void giveWeapon();
 
     void tick(); //无条件tick
     void tick(QKeyEvent * event);
     std::vector<PaintInfo> paint();
+
 
     void setRealPosition(double x, double y);
 

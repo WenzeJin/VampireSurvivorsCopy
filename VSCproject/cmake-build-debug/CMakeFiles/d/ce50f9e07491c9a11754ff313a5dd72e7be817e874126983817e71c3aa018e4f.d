@@ -933,6 +933,10 @@ VSCproject_autogen/timestamp: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/CMakeLists.txt \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.cpp \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.h \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.cpp \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.cpp \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.cpp \

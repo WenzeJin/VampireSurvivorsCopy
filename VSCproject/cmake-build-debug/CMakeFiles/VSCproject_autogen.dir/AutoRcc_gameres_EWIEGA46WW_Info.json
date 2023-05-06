@@ -7,7 +7,12 @@
 	"INCLUDE_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/include",
 	"INPUTS" : 
 	[
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic3.gif",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic2.gif",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic1.gif",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic4.gif",
 		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/map1_bg.png",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/aoebullet1.png",
 		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/hero1.png"
 	],
 	"LOCK_FILE" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject_autogen.dir/AutoRcc_gameres_EWIEGA46WW_Lock.lock",

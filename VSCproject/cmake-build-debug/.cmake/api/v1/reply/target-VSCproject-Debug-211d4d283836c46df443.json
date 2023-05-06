@@ -264,18 +264,20 @@
 				16,
 				18,
 				20,
-				25
+				22,
+				24,
+				29
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "VSCproject_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "VSCproject_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "VSCproject_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "VSCproject::@6890427a1f51a3e7e1df",
@@ -373,7 +375,9 @@
 				16,
 				18,
 				20,
-				25
+				22,
+				24,
+				29
 			]
 		},
 		{
@@ -383,7 +387,7 @@
 				1,
 				5,
 				8,
-				24
+				28
 			]
 		},
 		{
@@ -399,16 +403,18 @@
 				17,
 				19,
 				21,
-				22,
-				23
+				23,
+				25,
+				26,
+				27
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				26,
-				27
+				30,
+				31
 			]
 		}
 	],
@@ -533,6 +539,28 @@
 		{
 			"backtrace" : 1,
 			"path" : "GameLogic/Weapon.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "GameLogic/Bullet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "GameLogic/Bullet.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "GameLogic/Enemy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "GameLogic/Enemy.h",
 			"sourceGroupIndex" : 2
 		},
 		{

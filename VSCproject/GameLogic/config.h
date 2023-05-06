@@ -24,4 +24,16 @@
 #define HERO_1_PATH ":/image/Assets/hero1.png"
 #define HERO_1_HEALTH 100
 
+/*------子弹相关设置信息--*/
+#define NUM_OF_BULLETS 1
+#define AOE_BULLET_1_PATH ":/image/Assets/aoebullet1.png"
+
+/*------武器相关设置信息--*/
+#define NUM_OF_WEAPONS 1
+
+#define WEAPON_1_NAME "电磁阵"
+#define WEAPON_1_DAMAGE 10
+#define WEAPON_1_DEFAULT_RANGE 150
+#define WEAPON_1_BULLET_TYPE 1
+
 #endif //VSCPROJECT_CONFIG_H

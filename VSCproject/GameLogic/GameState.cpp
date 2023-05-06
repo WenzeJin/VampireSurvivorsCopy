@@ -10,6 +10,7 @@ void GameState::initMap(unsigned int map_style) {
 
 void GameState::initHero(unsigned int hero_style) {
     player = new Hero((int)hero_style, parent, _map);
+    player->giveWeapon();
 }
 
 std::vector<PaintInfo> GameState::paint() {

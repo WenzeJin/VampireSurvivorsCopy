@@ -765,10 +765,13 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.h \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Hero.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/PaintInfo.h \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Weapon.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/config.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/menu.h

@@ -30,6 +30,9 @@ Hero::Hero() {
     real_rect.moveTo((int)real_pos.first,(int)real_pos.second);
 
     alive = true;
+
+    _weapon = nullptr;
+    weapon_type = 1;
 }
 
 Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
@@ -38,6 +41,7 @@ Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
         case 1:
             _image.load(HERO_1_PATH);
             HP_MAX = HERO_1_HEALTH; //TODO:后续这里要改成可以根据文件读写结果调整，实现升级效果
+            weapon_type = 1;
             break;
     }
 
@@ -74,6 +78,8 @@ Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
     setExpBarPosition();
 
     alive = true;
+
+    _weapon = nullptr;
 }
 
 void Hero::setWidgetParent(QWidget *parent) {
@@ -106,6 +112,7 @@ void Hero::setHpBarPosition() {
 void Hero::tick() {
     map_parent->setAbsolutePos(absolute_pos.first - (int)real_pos.first,
                                absolute_pos.second - (int)real_pos.second);
+    _weapon->tick();
 }
 
 void Hero::tick(QKeyEvent *e) {
@@ -127,6 +134,12 @@ void Hero::tick(QKeyEvent *e) {
 
 std::vector<PaintInfo> Hero::paint() {
     std::vector<PaintInfo> buffer;
+    std::vector<PaintInfo> temp;
+    temp = _weapon->paint();
+    buffer.reserve(temp.size());
+    for(auto& item: temp){
+        buffer.push_back(item);
+    }
     buffer.emplace_back(_image, absolute_pos.first, absolute_pos.second);
     return buffer;
 }
@@ -136,6 +149,14 @@ void Hero::setRealPosition(double x, double y) {
     real_pos.second = y;
     real_rect.moveTo((int)real_pos.first, (int)real_pos.second);
     //TODO：这里之后要加上使地图移动的部分
+}
+
+void Hero::giveWeapon() {
+    switch(weapon_type){
+        case 1:
+            _weapon = new HeroStaticAOEWeapon(map_parent, (Hero *)this,
+                                              WEAPON_1_DEFAULT_RANGE, (unsigned)WEAPON_1_BULLET_TYPE, WEAPON_1_DAMAGE);
+    }
 }
 
 

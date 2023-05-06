@@ -264,6 +264,18 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.h",
+			"MU",
+			"EDAMEEOPZ5/moc_Bullet.cpp",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.h",
+			"MU",
+			"EDAMEEOPZ5/moc_Enemy.cpp",
+			null
+		],
+		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h",
 			"MU",
 			"EDAMEEOPZ5/moc_GameMap.cpp",
@@ -375,6 +387,16 @@
 	"SETTINGS_FILE" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/VSCproject_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.cpp",
+			"MU",
+			null
+		],
 		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.cpp",
 			"MU",
