@@ -15,6 +15,7 @@ GameMain::GameMain(QWidget *parent) :
     game = new GameState(this);
     game->initMap(1);
     game->initHero(1);
+    game->initEnemy(1);
     initScene();
     m_Timer.setInterval(TIMER_RATE);
 
@@ -50,5 +51,9 @@ void GameMain::paintEvent(QPaintEvent * event) {
 }
 
 void GameMain::keyPressEvent(QKeyEvent *event) {
-    game->tick(event);
+    game->keyPressTick(event);
+}
+
+void GameMain::keyReleaseEvent(QKeyEvent *event) {
+    game->keyReleaseTick(event);
 }

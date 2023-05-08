@@ -937,6 +937,8 @@ VSCproject_autogen/timestamp: \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.cpp \

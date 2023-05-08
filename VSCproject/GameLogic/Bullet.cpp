@@ -3,6 +3,8 @@
 //
 
 #include "Bullet.h"
+#include "Enemy.h"
+#include "Hero.h"
 
 void Bullet::setRealPosition(int x, int y) {
     real_pos.first = x;
@@ -35,7 +37,8 @@ HeroStaticAOEBullet::HeroStaticAOEBullet(GameMap *map_parent, Hero *user, int ra
 }
 
 void HeroStaticAOEBullet::tick() {
-    update_pos();
+    if(isEnabled())
+        update_pos();
     //TODO:伤害待做
 }
 

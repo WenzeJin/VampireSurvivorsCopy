@@ -145,6 +145,14 @@ build CMakeFiles/VSCproject.dir/GameLogic/Enemy.cpp.o: CXX_COMPILER__VSCproject_
   OBJECT_DIR = CMakeFiles/VSCproject.dir
   OBJECT_FILE_DIR = CMakeFiles/VSCproject.dir/GameLogic
 
+build CMakeFiles/VSCproject.dir/GameLogic/EnemyController.cpp.o: CXX_COMPILER__VSCproject_Debug /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.cpp || cmake_object_order_depends_target_VSCproject
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/VSCproject.dir/GameLogic/EnemyController.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/include -isystem /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Headers -iframework /Applications/Qt/6.4.1/macos/lib -isystem /Applications/Qt/6.4.1/macos/mkspecs/macx-clang -isystem /Applications/Qt/6.4.1/macos/include -isystem /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Headers -isystem /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/VSCproject.dir
+  OBJECT_FILE_DIR = CMakeFiles/VSCproject.dir/GameLogic
+
 build CMakeFiles/VSCproject.dir/VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp.o: CXX_COMPILER__VSCproject_Debug /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp || cmake_object_order_depends_target_VSCproject
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/VSCproject.dir/VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp.o.d
@@ -161,7 +169,7 @@ build CMakeFiles/VSCproject.dir/VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp.o:
 #############################################
 # Link the executable VSCproject
 
-build VSCproject: CXX_EXECUTABLE_LINKER__VSCproject_Debug CMakeFiles/VSCproject.dir/VSCproject_autogen/mocs_compilation.cpp.o CMakeFiles/VSCproject.dir/main.cpp.o CMakeFiles/VSCproject.dir/gamemain.cpp.o CMakeFiles/VSCproject.dir/menu.cpp.o CMakeFiles/VSCproject.dir/GameLogic/GameState.cpp.o CMakeFiles/VSCproject.dir/GameLogic/PaintInfo.cpp.o CMakeFiles/VSCproject.dir/GameLogic/GameMap.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Hero.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Option.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Weapon.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Bullet.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Enemy.cpp.o CMakeFiles/VSCproject.dir/VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp.o | /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/QtGui /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore || VSCproject_autogen VSCproject_autogen_timestamp_deps
+build VSCproject: CXX_EXECUTABLE_LINKER__VSCproject_Debug CMakeFiles/VSCproject.dir/VSCproject_autogen/mocs_compilation.cpp.o CMakeFiles/VSCproject.dir/main.cpp.o CMakeFiles/VSCproject.dir/gamemain.cpp.o CMakeFiles/VSCproject.dir/menu.cpp.o CMakeFiles/VSCproject.dir/GameLogic/GameState.cpp.o CMakeFiles/VSCproject.dir/GameLogic/PaintInfo.cpp.o CMakeFiles/VSCproject.dir/GameLogic/GameMap.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Hero.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Option.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Weapon.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Bullet.cpp.o CMakeFiles/VSCproject.dir/GameLogic/Enemy.cpp.o CMakeFiles/VSCproject.dir/GameLogic/EnemyController.cpp.o CMakeFiles/VSCproject.dir/VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp.o | /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/QtGui /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore || VSCproject_autogen VSCproject_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Applications/Qt/6.4.1/macos/lib  /Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/QtGui  /Applications/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal
   LINK_PATH = -F/Applications/Qt/6.4.1/macos/lib
@@ -229,7 +237,7 @@ build VSCproject_autogen/EWIEGA46WW/qrc_gameres.cpp | ${cmake_ninja_workdir}VSCp
 #############################################
 # Phony custom command for CMakeFiles/VSCproject_autogen_timestamp_deps
 
-build CMakeFiles/VSCproject_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/VSCproject_autogen_timestamp_deps: phony /Applications/Qt/6.4.1/macos/./libexec/uic /Applications/Qt/6.4.1/macos/./libexec/moc
+build CMakeFiles/VSCproject_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/VSCproject_autogen_timestamp_deps: phony /Applications/Qt/6.4.1/macos/./libexec/moc /Applications/Qt/6.4.1/macos/./libexec/uic
 
 
 #############################################

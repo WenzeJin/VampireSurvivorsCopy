@@ -4,15 +4,15 @@
 
 #ifndef VSCPROJECT_BULLET_H
 #define VSCPROJECT_BULLET_H
-#include "Enemy.h"
 #include "GameMap.h"
 #include <utility>
 #include <QPixmap>
 #include "PaintInfo.h"
-#include "Hero.h"
+
 
 
 class Hero;
+class Enemy;
 
 class Bullet {
     GameMap * map_parent = nullptr;

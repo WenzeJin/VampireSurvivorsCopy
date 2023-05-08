@@ -276,6 +276,12 @@
 			null
 		],
 		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.h",
+			"MU",
+			"EDAMEEOPZ5/moc_EnemyController.cpp",
+			null
+		],
+		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h",
 			"MU",
 			"EDAMEEOPZ5/moc_GameMap.cpp",
@@ -394,6 +400,11 @@
 		],
 		[
 			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.cpp",
 			"MU",
 			null
 		],

@@ -25,6 +25,9 @@ public:
     int getPosRangeY();
 
     void setAbsolutePos(int x, int y);
+
+    [[nodiscard]] int getAbsoluteX() const { return absolute_pos.first; }
+    [[nodiscard]] int getAbsoluteY() const { return absolute_pos.second; }
 };
 
 

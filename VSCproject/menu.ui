@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>ChickStart</string>
+    <string>ClickStart</string>
    </property>
   </widget>
  </widget>

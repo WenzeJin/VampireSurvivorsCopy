@@ -29,6 +29,13 @@ std::vector<PaintInfo> GameState::paint() {
         buffer.push_back(item);
     }
 
+    for(auto& lst : enemies){
+        for(auto& each : lst){
+            if(each && each->isEnabled())
+                buffer.push_back(each->paint());
+        }
+    }
+
     return buffer;
 }
 
@@ -36,11 +43,13 @@ GameState::GameState() {
     parent = nullptr;
     _map = nullptr;
     player = nullptr;
+    enemy_control = nullptr;
 }
 
 GameState::GameState(QWidget *parent) :parent(parent){
     _map = nullptr;
     player = nullptr;
+    enemy_control = nullptr;
 }
 
 GameState::~GameState() {
@@ -49,9 +58,24 @@ GameState::~GameState() {
 
 void GameState::tick() {
     player->tick();
+    enemy_control->tick();
+    for(auto& lst : enemies){
+        for(auto& each : lst){
+            if(each && each->isEnabled())
+                each->tick();
+        }
+    }
 }
 
-void GameState::tick(QKeyEvent *event) {
-    player->tick(event);
+void GameState::keyPressTick(QKeyEvent *event) {
+    player->keyPressTick(event);
+}
+
+void GameState::keyReleaseTick(QKeyEvent *event) {
+    player->keyReleaseTick(event);
+}
+
+void GameState::initEnemy(int stage) {
+    enemy_control = new EnemyController(this, stage);
 }
 

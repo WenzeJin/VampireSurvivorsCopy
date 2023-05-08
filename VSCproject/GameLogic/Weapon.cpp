@@ -4,6 +4,7 @@
 
 #include "Weapon.h"
 
+
 Weapon::Weapon(unsigned int bullet_style, int damage, Hero * user, GameMap *map_p) :
 bullet_style(bullet_style), damage(damage), map_parent(map_p), user(user), bullet_tot(0)
 {}

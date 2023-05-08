@@ -14,7 +14,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(VSCproject gameres.qrc main.cpp gamemain.cpp gamemain.h gamemain.ui menu.cpp menu.h menu.ui GameLogic/GameState.cpp GameLogic/GameState.h GameLogic/config.h GameLogic/PaintInfo.cpp GameLogic/PaintInfo.h GameLogic/GameMap.cpp GameLogic/GameMap.h GameLogic/Hero.cpp GameLogic/Hero.h GameLogic/Option.cpp GameLogic/Option.h GameLogic/Weapon.cpp GameLogic/Weapon.h GameLogic/Bullet.cpp GameLogic/Bullet.h GameLogic/Enemy.cpp GameLogic/Enemy.h)
+add_executable(VSCproject gameres.qrc main.cpp gamemain.cpp gamemain.h gamemain.ui menu.cpp menu.h menu.ui GameLogic/GameState.cpp GameLogic/GameState.h GameLogic/config.h GameLogic/PaintInfo.cpp GameLogic/PaintInfo.h GameLogic/GameMap.cpp GameLogic/GameMap.h GameLogic/Hero.cpp GameLogic/Hero.h GameLogic/Option.cpp GameLogic/Option.h GameLogic/Weapon.cpp GameLogic/Weapon.h GameLogic/Bullet.cpp GameLogic/Bullet.h GameLogic/Enemy.cpp GameLogic/Enemy.h GameLogic/EnemyController.cpp GameLogic/EnemyController.h)
 target_link_libraries(VSCproject
         Qt::Core
         Qt::Gui

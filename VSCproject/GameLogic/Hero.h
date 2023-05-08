@@ -9,6 +9,7 @@
 #include <QProgressBar>
 #include <QRect>
 #include <QKeyEvent>
+#include <list>
 #include "PaintInfo.h"
 #include "config.h"
 #include "GameMap.h"
@@ -24,7 +25,7 @@ class Hero {
     int exp;
     int level;
     bool alive;
-    int speed = 10;
+    int speed;
     //两个可视化显示条
     QProgressBar * hp_bar;
     QProgressBar * exp_bar;
@@ -39,6 +40,9 @@ class Hero {
     //武器部分
     int weapon_type;
     Weapon * _weapon;
+
+    //处理键盘问题
+    std::list<int> keys_pressed;
 public:
     QRect absolute_rect; //碰撞箱
     QRect real_rect;
@@ -50,7 +54,8 @@ public:
     void giveWeapon();
 
     void tick(); //无条件tick
-    void tick(QKeyEvent * event);
+    void keyPressTick(QKeyEvent * event);
+    void keyReleaseTick(QKeyEvent * event);
     std::vector<PaintInfo> paint();
 
 
