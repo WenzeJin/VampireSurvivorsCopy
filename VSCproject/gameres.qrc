@@ -7,5 +7,7 @@
         <file>Assets/pic3.gif</file>
         <file>Assets/pic4.gif</file>
         <file>Assets/aoebullet1.png</file>
+        <file>Assets/map1_br.png</file>
+        <file>Assets/bullet2.svg</file>
     </qresource>
 </RCC>

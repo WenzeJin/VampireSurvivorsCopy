@@ -6,11 +6,13 @@
 
 void GameState::initMap(unsigned int map_style) {
     _map = new GameMap(map_style);
+    _map->loadBarriers();
 }
 
 void GameState::initHero(unsigned int hero_style) {
     player = new Hero((int)hero_style, parent, _map);
     player->giveWeapon();
+    player->setGame(this);
 }
 
 std::vector<PaintInfo> GameState::paint() {
@@ -65,6 +67,8 @@ void GameState::tick() {
                 each->tick();
         }
     }
+
+    judgeDamageEnemies();
 }
 
 void GameState::keyPressTick(QKeyEvent *event) {
@@ -77,5 +81,13 @@ void GameState::keyReleaseTick(QKeyEvent *event) {
 
 void GameState::initEnemy(int stage) {
     enemy_control = new EnemyController(this, stage);
+}
+
+void GameState::judgeDamageEnemies() {
+    for(auto & type : enemies){
+        for(auto & each : type){
+            player->judgeDamage(each);
+        }
+    }
 }
 

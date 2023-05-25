@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -19,16 +20,20 @@ QT_BEGIN_NAMESPACE
 class Ui_GameMain
 {
 public:
-    QPushButton *pushButton;
+    QPushButton *pause_button;
+    QLabel *enemy_cnt_label;
 
     void setupUi(QWidget *GameMain)
     {
         if (GameMain->objectName().isEmpty())
             GameMain->setObjectName("GameMain");
         GameMain->resize(514, 286);
-        pushButton = new QPushButton(GameMain);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(10, 0, 100, 32));
+        pause_button = new QPushButton(GameMain);
+        pause_button->setObjectName("pause_button");
+        pause_button->setGeometry(QRect(10, 0, 100, 32));
+        enemy_cnt_label = new QLabel(GameMain);
+        enemy_cnt_label->setObjectName("enemy_cnt_label");
+        enemy_cnt_label->setGeometry(QRect(20, 50, 151, 16));
 
         retranslateUi(GameMain);
 
@@ -38,7 +43,8 @@ public:
     void retranslateUi(QWidget *GameMain)
     {
         GameMain->setWindowTitle(QCoreApplication::translate("GameMain", "GameMain", nullptr));
-        pushButton->setText(QCoreApplication::translate("GameMain", "PushButton", nullptr));
+        pause_button->setText(QCoreApplication::translate("GameMain", "PushButton", nullptr));
+        enemy_cnt_label->setText(QCoreApplication::translate("GameMain", "TextLabel", nullptr));
     } // retranslateUi
 
 };

@@ -34,6 +34,8 @@ Hero::Hero() {
 
     _weapon = nullptr;
     weapon_type = 1;
+
+    _game = nullptr;
 }
 
 Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
@@ -84,6 +86,8 @@ Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
 
     map_parent->setAbsolutePos(absolute_pos.first - (int)real_pos.first,
                                absolute_pos.second - (int)real_pos.second);
+
+    _game = nullptr;
 }
 
 void Hero::setWidgetParent(QWidget *parent) {
@@ -114,26 +118,35 @@ void Hero::setHpBarPosition() {
 }
 
 void Hero::tick() {
+    int x_bias = 0;
+    int y_bias = 0;
     for(auto key : keys_pressed){
         switch (key) {
             case Qt::Key_W:
-                real_pos.second -= speed;
+                y_bias -= speed;
                 break;
             case Qt::Key_A:
-                real_pos.first -= speed;
+                x_bias -= speed;
                 break;
             case Qt::Key_S:
-                real_pos.second += speed;
+                y_bias += speed;
                 break;
             case Qt::Key_D:
-                real_pos.first += speed;
+                x_bias += speed;
                 break;
             default:
                 break;
         }
     }
 
+    if(attemptMove(x_bias, 0)){
+        real_pos.first += x_bias;
+    }
+    if(attemptMove(0, y_bias)){
+        real_pos.second += y_bias;
+    }
 
+    real_rect.moveTo((int)real_pos.first, (int)real_pos.second);
     map_parent->setAbsolutePos(absolute_pos.first - (int)real_pos.first,
                                absolute_pos.second - (int)real_pos.second);
     _weapon->tick();
@@ -142,22 +155,6 @@ void Hero::tick() {
 void Hero::keyPressTick(QKeyEvent *event) {
     if(!event->isAutoRepeat())  //判断如果不是长按时自动触发的按下,就将key值加入容器
         keys_pressed.push_back(event->key());
-//    switch(event->key()){
-//        case Qt::Key_W:
-//            real_pos.second -= speed;
-//            break;
-//        case Qt::Key_A:
-//            real_pos.first -= speed;
-//            break;
-//        case Qt::Key_S:
-//            real_pos.second += speed;
-//            break;
-//        case Qt::Key_D:
-//            real_pos.first += speed;
-//            break;
-//    }
-//    map_parent->setAbsolutePos(absolute_pos.first - (int)real_pos.first,
-//                               absolute_pos.second - (int)real_pos.second);
 }
 
 void Hero::keyReleaseTick(QKeyEvent *event) {
@@ -189,6 +186,31 @@ void Hero::giveWeapon() {
         case 1:
             _weapon = new HeroStaticAOEWeapon(map_parent, (Hero *)this,
                                               WEAPON_1_DEFAULT_RANGE, (unsigned)WEAPON_1_BULLET_TYPE, WEAPON_1_DAMAGE);
+    }
+}
+
+bool Hero::judgeDamage(Enemy *e) {
+    return _weapon->judgeDamage(e);
+}
+
+void Hero::damage(int h) {
+    if(alive){
+        hp -= h;
+        if(hp < 0){
+            alive = false;
+        }
+    }
+    healthChange();
+}
+
+bool Hero::attemptMove(int x_bias, int y_bias) {
+    QRect test(real_rect);
+    test.moveTo((int)real_pos.first + x_bias, (int)real_pos.second + y_bias);
+    if(map_parent->checkPosition(test)){
+        init_interact = false;
+        return true;
+    } else {
+        return init_interact;
     }
 }
 

@@ -71,6 +71,7 @@ void Enemy::setRealPosition(double x, double y) {
 void Enemy::damage(int d) {
     if(alive){
         hp -= d;
+        hp_bar->show();
         healthChange();
         if(hp <= 0)
             die();
@@ -91,6 +92,7 @@ void Enemy::enable(){
     hp_bar->show();
     setHpBarPosition();
     healthChange();
+    hp_bar->hide();
 }
 
 void Enemy::disable() {
@@ -113,11 +115,24 @@ NoWeaponEnemy::NoWeaponEnemy(int enemy_style, QWidget *w_parent, EnemyController
     switch(enemy_style){
         case 1:
             power = ENEMY_1_POWER;
+            CD = ENEMY_1_CD;
     }
+    cdn = CD;
 }
 
 bool NoWeaponEnemy::judgeDamage() {
-    return false;
+    if(cdn > 0){
+        cdn --;
+        return false;
+    } else {
+        cdn = CD;
+    }
+    if(real_rect.intersects(target->real_rect)){
+        target->damage(power);
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void NoWeaponEnemy::tick() {
@@ -129,8 +144,7 @@ void NoWeaponEnemy::tick() {
     direction.second += bias;
     setRealPosition(real_pos.first + direction.first,
                     real_pos.second + direction.second );
-    //TODO:做伤害检测
-    //judgeDamage();
+    judgeDamage();
 }
 
 std::pair<double, double> NoWeaponEnemy::getDirectionVector() {

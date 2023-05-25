@@ -7,14 +7,20 @@
 #include "config.h"
 #include "PaintInfo.h"
 #include <QPixmap>
+#include <QRect>
 #include <utility>
+#include <vector>
 #include <exception>
 
 class GameMap {
-    unsigned map_style;
+    unsigned map_style{};
     QPixmap map_bg;
+    QPixmap map_br;
     std::pair<int, int> pos_range;
     std::pair<int, int> absolute_pos;
+    std::pair<int, int> lattice;
+    std::pair<int, int> lattice_scale;
+    std::vector<QRect> barriers;
 
 public:
     explicit GameMap(unsigned map_style);
@@ -28,6 +34,10 @@ public:
 
     [[nodiscard]] int getAbsoluteX() const { return absolute_pos.first; }
     [[nodiscard]] int getAbsoluteY() const { return absolute_pos.second; }
+
+    void loadBarriers();
+
+    bool checkPosition(const QRect & object);
 };
 
 

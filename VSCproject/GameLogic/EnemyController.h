@@ -13,6 +13,7 @@ class EnemyController {
     GameState * game;
     int game_stage;
     int type_num;
+    int enemy_death_cnt;
 
     struct TypeController{
         int enemy_type;
@@ -33,6 +34,8 @@ public:
     void tick();
 
     void reportDeath(int type);
+
+    [[nodiscard]] int getEnemyDeathCnt() const { return enemy_death_cnt; }
 
 private:
 

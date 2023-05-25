@@ -9,6 +9,7 @@
 #include <cassert>
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
 EnemyController::EnemyController(GameState *g, int stage) : game(g), game_stage(stage){
     StageInfo this_stage = STAGE_INFOS[stage - 1];
@@ -37,6 +38,8 @@ EnemyController::EnemyController(GameState *g, int stage) : game(g), game_stage(
         vector_pos ++;
     }
 
+    enemy_death_cnt = 0;
+
     srand(time(nullptr));
 }
 
@@ -61,6 +64,10 @@ void EnemyController::reportDeath(int type) {
         }
     }
 
+    switch(type){
+        case 1:
+            enemy_death_cnt ++;
+    }
 }
 
 void EnemyController::enableNullSpace(int enemy_type, Enemy *&space) {
@@ -108,7 +115,7 @@ std::pair<double, double> EnemyController::generatePosition() {
         x = (double)(0 - game->_map->getAbsoluteX());
     }
 
-    if(up_or_down){
+    if(up_or_down){ 
         y = (double)(0 - game->_map->getAbsoluteY() + GAME_HEIGHT);
     } else {
         y = (double)(0 - game->_map->getAbsoluteY());
@@ -122,6 +129,7 @@ std::pair<double, double> EnemyController::generatePosition() {
 void EnemyController::tick() {
     //先处理reduce_cd
     for(auto & each : types){
+        std::cout << each.num_counters << std::endl;
         if(each.reduce_counters == 0 && each.max_cds > each.min_cds){
             each.max_cds --;
             each.reduce_counters = each.reduce_cds;

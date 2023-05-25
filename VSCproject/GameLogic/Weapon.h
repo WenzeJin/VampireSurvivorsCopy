@@ -23,7 +23,7 @@ protected:
 public:
     Weapon(unsigned bullet_style, int damage, Hero * user, GameMap * map_p);
     virtual void tick() = 0;
-
+    bool judgeDamage(Enemy *);
     std::vector<PaintInfo> paint();
     [[nodiscard]] Hero * getUser() const { return user; }
 };

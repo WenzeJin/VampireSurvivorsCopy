@@ -19,6 +19,18 @@ std::vector<PaintInfo> Weapon::paint() {
     return buffer;
 }
 
+bool Weapon::judgeDamage(Enemy * e) {
+    bool check = false;
+    for(auto & each: bullet_buffer){
+        if(each && each->isEnabled()){
+            if(each->judge_damage(e)){
+                check = true;
+            }
+        }
+    }
+    return check;
+}
+
 HeroStaticAOEWeapon::HeroStaticAOEWeapon(GameMap *map_p, Hero *user, int range, unsigned int bullet_style, int damage) :
 Weapon(bullet_style, damage, user, map_p), range(range){
     bullet_tot = 1;

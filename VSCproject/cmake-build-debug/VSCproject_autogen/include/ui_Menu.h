@@ -38,7 +38,7 @@ public:
     void retranslateUi(QWidget *Menu)
     {
         Menu->setWindowTitle(QCoreApplication::translate("Menu", "Menu", nullptr));
-        pushButton->setText(QCoreApplication::translate("Menu", "ChickStart", nullptr));
+        pushButton->setText(QCoreApplication::translate("Menu", "ClickStart", nullptr));
     } // retranslateUi
 
 };

@@ -31,8 +31,8 @@ public:
 
     PaintInfo paint();
 
-    [[nodiscard]] int getRealX() const { return real_pos.first; }
-    [[nodiscard]] int getRealY() const { return real_pos.second; }
+    [[nodiscard]] double getRealX() const { return real_pos.first; }
+    [[nodiscard]] double getRealY() const { return real_pos.second; }
     [[nodiscard]] int getAbsoluteX() const { return absolute_pos.first; }
     [[nodiscard]] int getAbsoluteY() const { return absolute_pos.second; }
     [[nodiscard]] bool isEnabled() const { return enabled; }
@@ -46,6 +46,8 @@ protected:
 
 class HeroStaticAOEBullet : public Bullet{
     int range;
+    int CD;
+    int cds;
     std::pair<double, double> center_real_pos;
     Hero * user;
 public:
@@ -55,6 +57,20 @@ public:
     bool judge_damage(Hero *) override { return false; }
 private:
     void update_pos();
+};
+
+class HeroDynamicBullet : public Bullet {
+    QRect real_rect;
+    Enemy * target;
+    int speed;
+public:
+    HeroDynamicBullet(GameMap * map_parent, Hero * user, Enemy * target, unsigned bullet_style, int damage);
+    void tick() override;
+    bool judge_damage(Enemy *) override;
+    bool judge_damage(Hero *) override { return false; }
+private:
+    void update_pos();
+    std::pair<double, double> getDirectionVector();
 };
 
 #endif //VSCPROJECT_BULLET_H

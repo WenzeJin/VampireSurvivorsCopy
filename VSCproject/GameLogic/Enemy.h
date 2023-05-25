@@ -67,6 +67,9 @@ public:
     [[nodiscard]] int getAbsoluteY() const { return absolute_pos.second; };
     [[nodiscard]] bool isEnabled() const { return enabled; };
 
+protected:
+    //TODO:bool attemptMove(int x_bias, int y_bias);
+
 private:
     void healthChange();
     void setHpBarPosition();
@@ -75,6 +78,8 @@ private:
 
 class NoWeaponEnemy : public Enemy{
     int power;
+    int CD;
+    int cdn;
 public:
     NoWeaponEnemy(int enemy_style, QWidget * w_parent, EnemyController * controller, GameMap * m_parent, Hero * target, double real_X, double real_Y);
 

@@ -18,7 +18,11 @@
 #define NUM_OF_MAPS 1
 #define MAP_1_NAME "Grass"
 #define MAP_1_PATH ":/image/Assets/map1_bg.png"
+#define MAP_1_BR ":/image/Assets/map1_br.png"
+#define MAP_1_CONFIG "MapConfigs/map1_br.txt"
 #define MAP_1_HEIGHT 3000
+#define MAP_1_LATTICE_X 30
+#define MAP_1_LATTICE_Y 30
 
 /*------玩家角色设置信息--*/
 #define NUM_OF_HEROS 1
@@ -28,14 +32,18 @@
 #define HERO_1_SPEED 6
 
 /*------子弹相关设置信息--*/
-#define NUM_OF_BULLETS 1
+#define NUM_OF_BULLETS 2
 #define AOE_BULLET_1_PATH ":/image/Assets/aoebullet1.png"
+#define AOE_BULLET_1_CD 30
+
+#define BULLET_2_PATH ":/image/Assets/bullet2.svg"
+#define BULLET_2_SPEED 60
 
 /*------武器相关设置信息--*/
 #define NUM_OF_WEAPONS 1
 
 #define WEAPON_1_NAME "电磁阵"
-#define WEAPON_1_DAMAGE 10
+#define WEAPON_1_DAMAGE 4
 #define WEAPON_1_DEFAULT_RANGE 150
 #define WEAPON_1_BULLET_TYPE 1
 
@@ -47,6 +55,7 @@
 #define ENEMY_1_POWER 10
 #define ENEMY_1_HEALTH 30
 #define ENEMY_1_SPEED 3
+#define ENEMY_1_CD 60
 #define ENEMY_1_PATH ":/image/Assets/pic1.gif"
 
 /*-----难度相关设置------*/
@@ -66,7 +75,7 @@ struct StageInfo{
 };
 
 const StageInfo STAGE_INFOS[NUM_OF_STAGES] = {
-        {1, {{1,50,240,60,100}}},
+        {1, {{1,300,120,20,100}}},
 };
 
 

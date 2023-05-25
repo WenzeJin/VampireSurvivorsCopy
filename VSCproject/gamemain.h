@@ -31,12 +31,15 @@ private:
     QWidget * widget_parent;
     QTimer m_Timer;
     GameState * game;
+    bool game_paused;
 
     void initScene();
     void playGame();
     void paintEvent(QPaintEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
+
+    void pauseButtonClicked();
 };
 
 

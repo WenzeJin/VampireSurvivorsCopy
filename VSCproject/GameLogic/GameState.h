@@ -21,7 +21,9 @@ class GameState {
     Hero * player;
     EnemyController * enemy_control;
     std::vector<std::vector<Enemy *>> enemies;
+
 public:
+
     GameState();
     explicit GameState(QWidget * parent);
     ~GameState();
@@ -36,8 +38,19 @@ public:
     void initHero(unsigned hero_style);
     void initEnemy(int stage);
 
+    [[nodiscard]] int getEnemyDeathCnt() { return enemy_control->getEnemyDeathCnt(); };
+
+    bool isGameStop() { return player->isGameStop(); }
+
+
     friend class EnemyController;
+    friend class Bullet;
+    friend class HeroStaticAOEBullet;
+
+private:
+    void judgeDamageEnemies();
 };
 
 
 #endif //VSCPROJECT_GAMESTATE_H
+
