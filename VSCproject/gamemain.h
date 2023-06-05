@@ -8,9 +8,10 @@
 #include <QWidget>
 #include <QTimer>
 #include <QPainter>
-#include "menu.h"
 #include "GameLogic/GameState.h"
 #include "GameLogic/config.h"
+
+class Menu;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class GameMain; }
@@ -21,16 +22,20 @@ Q_OBJECT
 
 public:
     explicit GameMain(QWidget *parent = nullptr);
+    explicit GameMain(int hero_type, QWidget * parent = nullptr);
 
     ~GameMain() override;
 
-    void setWidgetParent(QWidget * in) { widget_parent = in;};
+    void setWidgetParent(Menu * in) { widget_parent = in;};
+    GameState * game;
+
+    void resumeGame();
 
 private:
     Ui::GameMain * ui;
-    QWidget * widget_parent;
+    Menu * widget_parent;
     QTimer m_Timer;
-    GameState * game;
+    int hero_type;
     bool game_paused;
 
     void initScene();

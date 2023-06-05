@@ -76,6 +76,15 @@ void EnemyController::enableNullSpace(int enemy_type, Enemy *&space) {
         case 1:
             space = new ENEMY_1_TYPE(1, game->parent, this, game->_map,
                                      game->player, real_pos.first, real_pos.second);
+            break;
+        case 2:
+            space = new ENEMY_2_TYPE(2, game->parent, this, game->_map,
+                                     game->player, real_pos.first, real_pos.second);
+            break;
+        case 3:
+            space = new ENEMY_3_TYPE(3, game->parent, this, game->_map,
+                                     game->player, real_pos.first, real_pos.second);
+            break;
     }
     space->enable();
 }
@@ -129,7 +138,6 @@ std::pair<double, double> EnemyController::generatePosition() {
 void EnemyController::tick() {
     //先处理reduce_cd
     for(auto & each : types){
-        std::cout << each.num_counters << std::endl;
         if(each.reduce_counters == 0 && each.max_cds > each.min_cds){
             each.max_cds --;
             each.reduce_counters = each.reduce_cds;
@@ -150,4 +158,32 @@ void EnemyController::tick() {
             each.cds --;
         }
     }
+}
+
+void EnemyController::reportDeath(int type, double rx, double ry) {
+    for(auto & each : types){
+        if(each.enemy_type == type) {
+            each.num_counters --;
+            assert(each.num_counters >= 0);
+            break;
+        }
+    }
+
+    int value;
+    switch(type){
+        case 1:
+            enemy_death_cnt ++;
+            value = 10;
+            break;
+        case 2:
+            enemy_death_cnt ++;
+            value = 10;
+            break;
+        case 3:
+            enemy_death_cnt += 2;
+            value = 20;
+            break;
+    }
+
+    game->addExpBall(rx,ry, value);
 }

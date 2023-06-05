@@ -9,5 +9,7 @@
         <file>Assets/aoebullet1.png</file>
         <file>Assets/map1_br.png</file>
         <file>Assets/bullet2.svg</file>
+        <file>Assets/enemybullet.png</file>
+        <file>Assets/expball.png</file>
     </qresource>
 </RCC>

@@ -35,6 +35,8 @@ public:
 
     void reportDeath(int type);
 
+    void reportDeath(int type, double rx, double ry);
+
     [[nodiscard]] int getEnemyDeathCnt() const { return enemy_death_cnt; }
 
 private:

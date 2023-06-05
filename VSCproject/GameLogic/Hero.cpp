@@ -3,12 +3,16 @@
 //
 
 #include "Hero.h"
+#include <cmath>
+#include "GameState.h"
+#include <iostream>
 
 Hero::Hero() {
     _image.load(HERO_1_PATH);
     HP_MAX = 100;
     hp = HP_MAX;
     exp = 0;
+    EXP_MAX = HERO_INIT_EXP;
     speed = 10;
     level = 1;
     widget_parent = nullptr;
@@ -44,13 +48,22 @@ Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
             _image.load(HERO_1_PATH);
             HP_MAX = HERO_1_HEALTH; //TODO:后续这里要改成可以根据文件读写结果调整，实现升级效果
             weapon_type = 1;
+            reduce = HERO_1_REDUCE;
             speed = HERO_1_SPEED;
+            break;
+        case 2:
+            _image.load(HERO_1_PATH);
+            HP_MAX = HERO_2_HEALTH;
+            weapon_type = 2;
+            reduce = HERO_2_REDUCE;
+            speed = HERO_2_SPEED;
             break;
     }
 
     hp = HP_MAX;
-    exp = 50;
+    exp = 0;
     level = 1;
+    EXP_MAX = HERO_INIT_EXP;
     widget_parent = w_parent;
     hp_bar = new QProgressBar();
     exp_bar = new QProgressBar();
@@ -104,8 +117,7 @@ void Hero::healthChange() {
 }
 
 void Hero::expChange() {
-    //TODO:这里以后要适配升级exp更新
-    exp_bar->setRange(0, 100);
+    exp_bar->setRange(0, EXP_MAX);
     exp_bar->setValue(exp);
 }
 
@@ -118,26 +130,32 @@ void Hero::setHpBarPosition() {
 }
 
 void Hero::tick() {
-    int x_bias = 0;
-    int y_bias = 0;
+    double x_bias = 0;
+    double y_bias = 0;
     for(auto key : keys_pressed){
         switch (key) {
             case Qt::Key_W:
-                y_bias -= speed;
+                y_bias -= 1;
                 break;
             case Qt::Key_A:
-                x_bias -= speed;
+                x_bias -= 1;
                 break;
             case Qt::Key_S:
-                y_bias += speed;
+                y_bias += 1;
                 break;
             case Qt::Key_D:
-                x_bias += speed;
+                x_bias += 1;
                 break;
             default:
                 break;
         }
     }
+    double mod = sqrt(x_bias * x_bias + y_bias * y_bias);
+    if(mod != 0){
+        x_bias /= mod; y_bias /= mod;
+    }
+    x_bias *= speed;
+    y_bias *= speed;
 
     if(attemptMove(x_bias, 0)){
         real_pos.first += x_bias;
@@ -150,6 +168,13 @@ void Hero::tick() {
     map_parent->setAbsolutePos(absolute_pos.first - (int)real_pos.first,
                                absolute_pos.second - (int)real_pos.second);
     _weapon->tick();
+
+    exp += _game->countExp(real_pos);
+    std::cout << exp << std::endl;
+    if(exp >= EXP_MAX){
+        waiting_upgrade = true;
+    }
+    expChange();
 }
 
 void Hero::keyPressTick(QKeyEvent *event) {
@@ -186,6 +211,11 @@ void Hero::giveWeapon() {
         case 1:
             _weapon = new HeroStaticAOEWeapon(map_parent, (Hero *)this,
                                               WEAPON_1_DEFAULT_RANGE, (unsigned)WEAPON_1_BULLET_TYPE, WEAPON_1_DAMAGE);
+            break;
+        case 2:
+            _weapon = new HeroDynamicWeapon(map_parent, (Hero *) this, WEAPON_2_CD,
+                                            WEAPON_2_BULLET_TYPE, WEAPON_2_DAMAGE);
+            break;
     }
 }
 
@@ -195,7 +225,7 @@ bool Hero::judgeDamage(Enemy *e) {
 
 void Hero::damage(int h) {
     if(alive){
-        hp -= h;
+        hp -= int(h * (1 - reduce));
         if(hp < 0){
             alive = false;
         }
@@ -203,15 +233,39 @@ void Hero::damage(int h) {
     healthChange();
 }
 
-bool Hero::attemptMove(int x_bias, int y_bias) {
+bool Hero::attemptMove(double x_bias, double y_bias) {
     QRect test(real_rect);
-    test.moveTo((int)real_pos.first + x_bias, (int)real_pos.second + y_bias);
+    test.moveTo(int(real_pos.first + x_bias), int(real_pos.second + y_bias));
     if(map_parent->checkPosition(test)){
         init_interact = false;
         return true;
     } else {
         return init_interact;
     }
+}
+
+void Hero::upgrade(int type) {
+    switch(type){
+        case 1: {
+            int bias = HP_MAX - hp;
+            HP_MAX = (int)((double) HP_MAX * HP_INC_RATE);
+            hp = HP_MAX - bias;
+            healthChange();
+            break;
+        }
+        case 2:
+            speed = (int)((double) speed * SPEED_INC_RATE);
+            break;
+        case 3:
+            _weapon->upgrade();
+            break;
+    }
+    keys_pressed.clear();
+    waiting_upgrade = false;
+    EXP_MAX *= 2;
+    exp = 0;
+    level ++;
+    expChange();
 }
 
 

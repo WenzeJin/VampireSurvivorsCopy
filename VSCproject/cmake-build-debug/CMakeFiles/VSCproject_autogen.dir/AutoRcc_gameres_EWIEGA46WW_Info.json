@@ -7,7 +7,9 @@
 	"INCLUDE_DIR" : "/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/include",
 	"INPUTS" : 
 	[
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/enemybullet.png",
 		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic3.gif",
+		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/expball.png",
 		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic2.gif",
 		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic1.gif",
 		"/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Assets/pic4.gif",

@@ -5,9 +5,8 @@
 #include "Enemy.h"
 #include <cmath>
 #include "EnemyController.h"
-#include <iostream>
 #include <cstdlib>
-#include <cmath>
+#include "Weapon.h"
 
 Enemy::Enemy(int enemy_style, QWidget *w_parent, EnemyController * controller, GameMap *m_parent, Hero * target, double real_X, double real_Y) {
     QSize pix_size;
@@ -17,6 +16,20 @@ Enemy::Enemy(int enemy_style, QWidget *w_parent, EnemyController * controller, G
             _image.load(ENEMY_1_PATH);
             HP_MAX = ENEMY_1_HEALTH;
             speed = ENEMY_1_SPEED;
+            pix_size.setWidth(40);
+            pix_size.setHeight(40);
+            break;
+        case 2:
+            _image.load(ENEMY_2_PATH);
+            HP_MAX = ENEMY_2_HEALTH;
+            speed = ENEMY_2_SPEED;
+            pix_size.setWidth(40);
+            pix_size.setHeight(40);
+            break;
+        case 3:
+            _image.load(ENEMY_3_PATH);
+            HP_MAX = ENEMY_3_HEALTH;
+            speed = ENEMY_3_SPEED;
             pix_size.setWidth(40);
             pix_size.setHeight(40);
             break;
@@ -53,8 +66,11 @@ Enemy::Enemy(int enemy_style, QWidget *w_parent, EnemyController * controller, G
     this->controller = controller;
 }
 
-PaintInfo Enemy::paint() {
-    return {_image, absolute_pos.first, absolute_pos.second};
+std::vector<PaintInfo> Enemy::paint() {
+    PaintInfo _this = {_image, absolute_pos.first, absolute_pos.second};
+    std::vector<PaintInfo> temp;
+    temp.push_back(_this);
+    return temp;
 }
 
 void Enemy::setRealPosition(double x, double y) {
@@ -82,7 +98,7 @@ void Enemy::die() {
     alive = false;
     disable();
     if(controller)
-        controller->reportDeath(enemy_type);
+        controller->reportDeath(enemy_type, real_pos.first, real_pos.second);
 }
 
 void Enemy::enable(){
@@ -116,6 +132,15 @@ NoWeaponEnemy::NoWeaponEnemy(int enemy_style, QWidget *w_parent, EnemyController
         case 1:
             power = ENEMY_1_POWER;
             CD = ENEMY_1_CD;
+            break;
+        case 2:
+            power = ENEMY_2_POWER;
+            CD = ENEMY_2_CD;
+            break;
+        case 3:
+            power = 0;
+            CD = 100;
+            break;
     }
     cdn = CD;
 }
@@ -157,5 +182,77 @@ std::pair<double, double> NoWeaponEnemy::getDirectionVector() {
     double mod = sqrt(temp.first * temp.first + temp.second * temp.second);
     temp.first /= mod;
     temp.second /= mod;
+    return temp;
+}
+
+NoWeaponEnemyGround::NoWeaponEnemyGround(int enemy_style, QWidget *w_parent, EnemyController *controller,
+                                         GameMap *m_parent, Hero *target, double real_X, double real_Y) : NoWeaponEnemy(
+        enemy_style, w_parent, controller, m_parent, target, real_X, real_Y) {}
+
+void NoWeaponEnemyGround::tick() {
+    auto direction = getDirectionVector();
+    double bias = (rand() % speed) * 0.6;
+    direction.first *= speed;
+    direction.second *= speed;
+    direction.first += bias;
+    direction.second += bias;
+    if(!attemptMove(direction.first, 0)){
+        direction.first = 0;
+    }
+    if(!attemptMove(0, direction.second)){
+        direction.second = 0;
+    }
+    setRealPosition(real_pos.first + direction.first, real_pos.second + direction.second);
+    judgeDamage();
+}
+
+bool NoWeaponEnemyGround::attemptMove(double x_bias, double y_bias) {
+    QRect test(real_rect);
+    test.moveTo(int(real_pos.first + x_bias), int(real_pos.second + y_bias));
+    if(map_parent->checkPosition(test)){
+        init_interact = false;
+        return true;
+    } else {
+        return init_interact;
+    }
+}
+
+
+WeaponEnemy::WeaponEnemy(int enemy_style, QWidget *w_parent, EnemyController *controller, GameMap *m_parent,
+                         Hero *target, double real_X, double real_Y) :
+        NoWeaponEnemy(enemy_style,w_parent,controller,m_parent,target,real_X,real_Y){
+    _weapon = new EnemyDynamicWeapon(m_parent,this, target, E_WEAPON_CD, E_WEAPON_DAMAGE);
+    x_move_range.first = real_X - 200;
+    direction = true;
+    x_move_range.second = real_X + 200;
+
+    if(x_move_range.first < 0){
+        x_move_range.first = 0;
+    }
+    if(x_move_range.second > map_parent->getPosRangeX()){
+        x_move_range.second = map_parent->getPosRangeX();
+    }
+}
+
+void WeaponEnemy::tick() {
+    if(direction){
+        setRealPosition(real_pos.first + speed, real_pos.second);
+        if(real_pos.first > x_move_range.second){
+            real_pos.first = x_move_range.second;
+            direction = false;
+        }
+    } else {
+        setRealPosition(real_pos.first - speed, real_pos.second);
+        if(real_pos.first < x_move_range.first){
+            real_pos.first = x_move_range.first;
+            direction = true;
+        }
+    }
+    _weapon->tick();
+}
+
+std::vector<PaintInfo> WeaponEnemy::paint() {
+    std::vector<PaintInfo> temp = _weapon->paint();
+    temp.emplace_back(_image, absolute_pos.first, absolute_pos.second);
     return temp;
 }

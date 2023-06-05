@@ -22,6 +22,9 @@ class Ui_GameMain
 public:
     QPushButton *pause_button;
     QLabel *enemy_cnt_label;
+    QLabel *level_label;
+    QPushButton *back_button;
+    QPushButton *end_button;
 
     void setupUi(QWidget *GameMain)
     {
@@ -33,7 +36,16 @@ public:
         pause_button->setGeometry(QRect(10, 0, 100, 32));
         enemy_cnt_label = new QLabel(GameMain);
         enemy_cnt_label->setObjectName("enemy_cnt_label");
-        enemy_cnt_label->setGeometry(QRect(20, 50, 151, 16));
+        enemy_cnt_label->setGeometry(QRect(20, 100, 221, 16));
+        level_label = new QLabel(GameMain);
+        level_label->setObjectName("level_label");
+        level_label->setGeometry(QRect(20, 130, 221, 16));
+        back_button = new QPushButton(GameMain);
+        back_button->setObjectName("back_button");
+        back_button->setGeometry(QRect(10, 30, 100, 32));
+        end_button = new QPushButton(GameMain);
+        end_button->setObjectName("end_button");
+        end_button->setGeometry(QRect(10, 60, 100, 32));
 
         retranslateUi(GameMain);
 
@@ -45,6 +57,9 @@ public:
         GameMain->setWindowTitle(QCoreApplication::translate("GameMain", "GameMain", nullptr));
         pause_button->setText(QCoreApplication::translate("GameMain", "PushButton", nullptr));
         enemy_cnt_label->setText(QCoreApplication::translate("GameMain", "TextLabel", nullptr));
+        level_label->setText(QCoreApplication::translate("GameMain", "TextLabel", nullptr));
+        back_button->setText(QCoreApplication::translate("GameMain", "\346\232\202\346\227\266\350\277\224\345\233\236", nullptr));
+        end_button->setText(QCoreApplication::translate("GameMain", "\347\273\223\347\256\227\346\234\254\345\261\200", nullptr));
     } // retranslateUi
 
 };

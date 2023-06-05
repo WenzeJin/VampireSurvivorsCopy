@@ -131,8 +131,10 @@ VSCproject_autogen/timestamp: \
 	/Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/Headers/qvector2d.h \
 	/Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/Headers/qvectornd.h \
 	/Applications/Qt/6.4.1/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QDialog \
 	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QProgressBar \
 	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
+	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
 	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
 	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qprogressbar.h \
 	/Applications/Qt/6.4.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
@@ -856,6 +858,7 @@ VSCproject_autogen/timestamp: \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ctype.h \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cwchar \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cwctype \
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/errno.h \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/exception \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional \
@@ -872,6 +875,7 @@ VSCproject_autogen/timestamp: \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio \
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdexcept \
@@ -939,6 +943,8 @@ VSCproject_autogen/timestamp: \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/ExpBall.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/ExpBall.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.cpp \
@@ -951,6 +957,7 @@ VSCproject_autogen/timestamp: \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/PaintInfo.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Weapon.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Weapon.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/config.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/config.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/3.25.2/CMakeCCompiler.cmake \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake \
@@ -958,47 +965,62 @@ VSCproject_autogen/timestamp: \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/cmake-build-debug/VSCproject_autogen/moc_predefs.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gameoverdialog.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gameoverdialog.h \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gameres.qrc \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/main.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/menu.cpp \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/menu.h \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCInformation.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCXXInformation.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeGenericSystem.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckCSourceCompiles.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckCXXCompilerFlag.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckIncludeFile.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckLibraryExists.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-C.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-CXX.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/Clang.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/GNU.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindOpenGL.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindPackageMessage.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindThreads.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/GNUInstallDirs.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/MacroAddFileDependencies.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-C.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-CXX.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-C.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-CXX.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin-Initialize.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin.cmake \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/UnixPaths.cmake \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/savedialog.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/savedialog.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/selectdialog.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/selectdialog.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/storedialog.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/storedialog.h \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/upgradedialog.cpp \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/upgradedialog.h \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCInformation.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCXXInformation.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeGenericSystem.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckCSourceCompiles.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckCXXCompilerFlag.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckIncludeFile.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CheckLibraryExists.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-C.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-CXX.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/Clang.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/GNU.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindOpenGL.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindPackageMessage.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindThreads.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/GNUInstallDirs.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/MacroAddFileDependencies.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-C.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-CXX.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-C.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-CXX.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin-Initialize.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin.cmake \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/UnixPaths.cmake \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameMain.ui \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameOverDialog.ui \
 	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/Menu.ui \
-	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/bin/cmake
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/SaveDialog.ui \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/SelectDialog.ui \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/StoreDialog.ui \
+	/Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/UpgradeDialog.ui \
+	/Users/jinwenze/Library/Application\ Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/CLion.app/Contents/bin/cmake/mac/bin/cmake

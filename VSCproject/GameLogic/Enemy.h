@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QProgressBar>
 #include <QRect>
+#include <vector>
 #include <QKeyEvent>
 #include "PaintInfo.h"
 #include "config.h"
@@ -52,7 +53,7 @@ public:
 
     virtual void tick() = 0;
 
-    PaintInfo paint();
+    virtual std::vector<PaintInfo> paint();
 
     void setRealPosition(double x, double y);
 
@@ -85,9 +86,32 @@ public:
 
     void tick() override;
 
-private:
+protected:
     bool judgeDamage();
     std::pair<double, double> getDirectionVector();
+};
+
+class NoWeaponEnemyGround : public NoWeaponEnemy{
+    bool init_interact = true;
+public:
+    NoWeaponEnemyGround(int enemy_style, QWidget * w_parent, EnemyController * controller,
+                        GameMap * m_parent, Hero * target, double real_X, double real_Y);
+
+    void tick() override;
+private:
+    bool attemptMove(double x_bias, double y_bias);
+
+};
+
+class WeaponEnemy : public NoWeaponEnemy{
+    Weapon * _weapon;
+    std::pair<double, double> x_move_range;
+    bool direction;
+public:
+    WeaponEnemy(int enemy_style, QWidget * w_parent, EnemyController * controller,
+                        GameMap * m_parent, Hero * target, double real_X, double real_Y);
+    std::vector<PaintInfo> paint() override;
+    void tick() override;
 };
 
 

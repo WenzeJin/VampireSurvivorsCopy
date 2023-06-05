@@ -25,8 +25,10 @@ class Hero {
     int hp;
     int exp;
     int level;
+    int EXP_MAX;
     bool alive;
     int speed;
+    double reduce;
     //两个可视化显示条
     QProgressBar * hp_bar;
     QProgressBar * exp_bar;
@@ -49,6 +51,8 @@ class Hero {
     //处理生成在障碍物上的问题
     bool init_interact = true;
 
+    bool waiting_upgrade = false;
+
 public:
     QRect absolute_rect; //碰撞箱
     QRect real_rect;
@@ -68,8 +72,8 @@ public:
 
     void damage(int h);
 
-    bool isGameStop() { return !alive; }
-
+    [[nodiscard]] bool isGameStop() const { return !alive; }
+    [[nodiscard]] bool isWaiting() const { return waiting_upgrade; }
 
     void setRealPosition(double x, double y);
 
@@ -78,6 +82,16 @@ public:
     [[nodiscard]] int getAbsoluteX() const { return absolute_pos.first; };
     [[nodiscard]] int getAbsoluteY() const { return absolute_pos.second; };
     [[nodiscard]] GameState * getGame() const { return _game; }
+    [[nodiscard]] int getLevel() const { return level; }
+    [[nodiscard]] double get_hp_percent() const {
+        int temp = hp;
+        if(temp < 0){
+            temp = 0;
+        }
+        return (double)temp / HP_MAX;
+    }
+
+    void upgrade(int type);
 
 private:
     void healthChange();
@@ -85,7 +99,7 @@ private:
     void setExpBarPosition();
     void setHpBarPosition();
 
-    bool attemptMove(int x_bias, int y_bias);
+    bool attemptMove(double x_bias, double y_bias);
 };
 
 

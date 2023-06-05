@@ -768,11 +768,11 @@
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Bullet.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Enemy.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/EnemyController.h \
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/ExpBall.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameMap.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/GameState.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Hero.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/PaintInfo.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/Weapon.h \
   /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/GameLogic/config.h \
-  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.h \
-  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/menu.h
+  /Users/jinwenze/Coding/2023/cppbig/VampireSurvivorsCopy/VSCproject/gamemain.h
