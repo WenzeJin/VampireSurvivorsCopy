@@ -29,6 +29,7 @@ public:
     virtual bool judge_damage(Hero *) = 0;
     virtual void enable(Enemy *) { enabled = true; }
     virtual void upgrade() {};
+    virtual int getCD() { return 0; }
 
     virtual void setRealPosition(double x, double y);
 
@@ -62,6 +63,7 @@ public:
     void tick() override;
     bool judge_damage(Enemy *) override;
     bool judge_damage(Hero *) override { return false; }
+    int getCD() override { return CD; }
 
     void upgrade() override {
         CD = (int)((double)CD / WEAPON_INC_RATE);

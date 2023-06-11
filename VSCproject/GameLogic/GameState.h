@@ -62,8 +62,12 @@ public:
 
     friend class EnemyController;
     friend class Bullet;
+    friend class Hero;
     friend class HeroStaticAOEBullet;
     friend class HeroDynamicWeapon;
+
+    void gameHalt();
+
 
 private:
     void judgeDamageEnemies();

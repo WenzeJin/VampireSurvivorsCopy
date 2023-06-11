@@ -15,7 +15,7 @@ void GameState::initHero(unsigned int hero_style) {
     player = new Hero((int)hero_style, parent, _map);
     player->setGame(this);
     player->giveWeapon();
-
+    HERO_TYPE = hero_style;
 }
 
 std::vector<PaintInfo> GameState::paint() {
@@ -83,7 +83,6 @@ GameState::~GameState() {
     delete _map;
     delete player;
     delete enemy_control;
-    std::cerr << "到这还好" << std::endl;
 //    for(auto & i : enemies){
 //        for(auto & j : i){
 //            delete j;
@@ -178,5 +177,21 @@ int GameState::countExp(std::pair<double, double> player_pos) {
     }
     std::cout << "获得经验：" << cnt << std::endl;
     return cnt;
+}
+
+void GameState::gameHalt() {
+    std::cout << "游戏挂起" << std::endl;
+    GAME_HALT = 1;
+    HALT_HP = player->getHp();
+    HALT_HPM = player->getHpMax();
+    GAME_LEVEL = player->getLevel();
+    HALT_EXP = player->getExp();
+    HALT_EXPM = player->getExpMax();
+    HERO_SPEED = player->getSpeed();
+    HERO_REDUCE = player->getReduce();
+    HERO_X = player->getRealX();
+    HERO_Y = player->getRealY();
+    DAMAGE = player->getDamage();
+    HALT_CD = player->getCD();
 }
 

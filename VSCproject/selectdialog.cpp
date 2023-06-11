@@ -28,6 +28,14 @@ SelectDialog::SelectDialog(Menu * menu_parent, QWidget *parent) :
         this->hide();
         m_p->reportGameStart(new_game);
     });
+
+    ui->pushButton->setIcon(QIcon(QPixmap(":/image/Assets/bt1.PNG").scaled(311,611)));
+    ui->pushButton->setIconSize(QSize(311,611));
+    ui->pushButton_2->setIcon(QIcon(QPixmap(":/image/Assets/bt2.PNG").scaled(311,611)));
+    ui->pushButton_2->setIconSize(QSize(311,611));
+
+    GAME_HALT = 0;
+    FIRST_RESUME = 0;
 }
 
 SelectDialog::~SelectDialog() {

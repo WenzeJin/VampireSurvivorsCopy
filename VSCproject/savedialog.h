@@ -26,6 +26,21 @@ private:
     Ui::SaveDialog *ui;
     Menu * m_p;
 
+    struct HaltInfo{
+        int hero_type;
+        int halt_hp;
+        int halt_hpm;
+        int game_level;
+        int halt_exp;
+        int halt_expm;
+        int hero_speed;
+        double hero_reduce;
+        int d;
+        int halt_cd;
+        double hero_x;
+        double hero_y;
+    } temp_halt;
+
     void refresh_file_list();
     void refresh_file_display();
     void new_file(QString & file_name);

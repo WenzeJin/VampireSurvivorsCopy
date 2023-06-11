@@ -28,6 +28,8 @@ public:
     virtual void tick() = 0;
     bool judgeDamage(Enemy *);
     virtual void upgrade();
+    virtual int getDamage() { return damage; }
+    virtual int getCD() { return 0; }
     std::vector<PaintInfo> paint();
     [[nodiscard]] Hero * getUser() const { return user; }
 };
@@ -38,6 +40,7 @@ class HeroStaticAOEWeapon : public Weapon{
 public:
     HeroStaticAOEWeapon(GameMap * map_p, Hero * user, int range, unsigned bullet_style, int damage);
 
+    int getCD() override { return bullet_buffer[0]->getCD(); }
     void tick() override;
     void upgrade() override;
 };
@@ -52,6 +55,7 @@ public:
 
     void tick() override;
 
+    int getCD() override { return CD; }
     void upgrade() override;
 private:
 

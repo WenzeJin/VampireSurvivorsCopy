@@ -19,6 +19,20 @@ extern int POWER;
 extern int SPEED;
 extern int LIVE;
 extern int INTELLIGENCE;
+extern int GAME_HALT;
+extern int HERO_TYPE;
+extern int HALT_HP;
+extern int HALT_HPM;
+extern int DAMAGE;
+extern int HALT_CD;
+extern int GAME_LEVEL;
+extern int HALT_EXP;
+extern int HALT_EXPM;
+extern int FIRST_RESUME;
+extern double HERO_X;
+extern double HERO_Y;
+extern int HERO_SPEED;
+extern double HERO_REDUCE;
 
 /*------地图设置信息------*/
 #define NUM_OF_MAPS 1

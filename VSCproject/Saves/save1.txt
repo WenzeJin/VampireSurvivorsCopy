@@ -1,2 +1,4 @@
-1000 1 1 1 1 1
-soul level power speed live intelligence
+26 1 1 1 1 1
+0 1 100 100 1 0 20 6 0.03 4 29 2144.64 980.36
+line 1: soul level power speed live intelligence 
+line 2:game_halt_info

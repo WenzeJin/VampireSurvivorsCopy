@@ -13,7 +13,11 @@
 
 Weapon::Weapon(unsigned int bullet_style, int damage, Hero * user, GameMap *map_p) :
 bullet_style(bullet_style), damage(damage), map_parent(map_p), user(user), bullet_tot(0)
-{}
+{
+    if(GAME_HALT){
+        this->damage = DAMAGE;
+    }
+}
 
 std::vector<PaintInfo> Weapon::paint() {
     std::vector<PaintInfo> buffer;
@@ -62,9 +66,14 @@ void HeroStaticAOEWeapon::upgrade() {
     bullet_buffer[0]->upgrade();
 }
 
+
 HeroDynamicWeapon::HeroDynamicWeapon(GameMap *map_p, Hero *user, int CD, unsigned int bullet_style, int damage) :
 Weapon(bullet_style, damage, user, map_p), CD(CD), cdn(CD){
     bullet_tot = DYNAMIC_BULLETS_MAX;
+    if(GAME_HALT){
+        this->CD = HALT_CD;
+        this->cdn = CD;
+    }
     curr_bullet_cnt = 0;
     _game = user->getGame();
     for(int i = 0; i < bullet_tot; i++){

@@ -25,6 +25,7 @@ public:
     void reportGameOver();
     void reportGamePaused();
     void reportGameStart(GameMain * game) { _game = game; }
+    void disableResume();
 
 private:
     Ui::Menu *ui;

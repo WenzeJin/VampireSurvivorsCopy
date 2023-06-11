@@ -3,6 +3,7 @@
 //
 
 #include "Bullet.h"
+#include "config.h"
 #include "Enemy.h"
 #include "Hero.h"
 #include "GameState.h"
@@ -42,6 +43,9 @@ HeroStaticAOEBullet::HeroStaticAOEBullet(GameMap *map_parent, Hero *user, int ra
     switch(bullet_style){
         case 1:
             CD = AOE_BULLET_1_CD;
+            if(GAME_HALT){
+                this->CD = HALT_CD;
+            }
     }
     cds = CD;
     center_real_pos.first = user->getRealX() + user->real_rect.width() * 0.5;

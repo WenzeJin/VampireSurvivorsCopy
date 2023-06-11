@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>升级！</string>
+   <string>升级！- 请选择接受一位庇护</string>
   </property>
   <widget class="QPushButton" name="choice1">
    <property name="geometry">

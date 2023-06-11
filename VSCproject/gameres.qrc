@@ -11,5 +11,11 @@
         <file>Assets/bullet2.svg</file>
         <file>Assets/enemybullet.png</file>
         <file>Assets/expball.png</file>
+        <file>Assets/bg.PNG</file>
+        <file>Assets/bt1.PNG</file>
+        <file>Assets/bt2.PNG</file>
+        <file>Assets/bt3.PNG</file>
+        <file>Assets/bt4.PNG</file>
+        <file>Assets/bt5.PNG</file>
     </qresource>
 </RCC>

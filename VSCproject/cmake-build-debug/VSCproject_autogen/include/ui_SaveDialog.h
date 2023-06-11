@@ -28,35 +28,39 @@ public:
     QPushButton *pushButton;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QLabel *label;
-    QLabel *label_4;
-    QLabel *label_2;
-    QLabel *label_6;
-    QLabel *f_soul;
     QLabel *label_5;
-    QLabel *label_7;
+    QLabel *label;
     QLabel *f_level;
-    QLabel *f_power;
     QLabel *f_speed;
     QLabel *f_live;
+    QLabel *f_soul;
+    QLabel *label_7;
+    QLabel *label_4;
+    QLabel *label_6;
     QLabel *f_intelligence;
+    QLabel *f_power;
+    QLabel *label_2;
+    QLabel *label_13;
+    QLabel *f_halt;
     QLineEdit *lineEdit;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QWidget *gridLayoutWidget_2;
     QGridLayout *gridLayout_2;
-    QLabel *label_3;
+    QLabel *c_level;
     QLabel *label_8;
     QLabel *label_9;
-    QLabel *label_10;
-    QLabel *c_soul;
-    QLabel *label_11;
-    QLabel *label_12;
-    QLabel *c_level;
-    QLabel *c_power;
     QLabel *c_speed;
+    QLabel *c_soul;
+    QLabel *label_12;
+    QLabel *label_3;
+    QLabel *label_11;
+    QLabel *c_power;
     QLabel *c_live;
     QLabel *c_intelligence;
+    QLabel *label_10;
+    QLabel *label_14;
+    QLabel *c_halt;
 
     void setupUi(QDialog *SaveDialog)
     {
@@ -75,50 +79,20 @@ public:
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(gridLayoutWidget);
-        label->setObjectName("label");
-
-        gridLayout->addWidget(label, 0, 0, 1, 1);
-
-        label_4 = new QLabel(gridLayoutWidget);
-        label_4->setObjectName("label_4");
-
-        gridLayout->addWidget(label_4, 0, 2, 1, 1);
-
-        label_2 = new QLabel(gridLayoutWidget);
-        label_2->setObjectName("label_2");
-
-        gridLayout->addWidget(label_2, 0, 1, 1, 1);
-
-        label_6 = new QLabel(gridLayoutWidget);
-        label_6->setObjectName("label_6");
-
-        gridLayout->addWidget(label_6, 0, 4, 1, 1);
-
-        f_soul = new QLabel(gridLayoutWidget);
-        f_soul->setObjectName("f_soul");
-
-        gridLayout->addWidget(f_soul, 1, 0, 1, 1);
-
         label_5 = new QLabel(gridLayoutWidget);
         label_5->setObjectName("label_5");
 
         gridLayout->addWidget(label_5, 0, 3, 1, 1);
 
-        label_7 = new QLabel(gridLayoutWidget);
-        label_7->setObjectName("label_7");
+        label = new QLabel(gridLayoutWidget);
+        label->setObjectName("label");
 
-        gridLayout->addWidget(label_7, 0, 5, 1, 1);
+        gridLayout->addWidget(label, 0, 0, 1, 1);
 
         f_level = new QLabel(gridLayoutWidget);
         f_level->setObjectName("f_level");
 
         gridLayout->addWidget(f_level, 1, 1, 1, 1);
-
-        f_power = new QLabel(gridLayoutWidget);
-        f_power->setObjectName("f_power");
-
-        gridLayout->addWidget(f_power, 1, 2, 1, 1);
 
         f_speed = new QLabel(gridLayoutWidget);
         f_speed->setObjectName("f_speed");
@@ -130,10 +104,50 @@ public:
 
         gridLayout->addWidget(f_live, 1, 4, 1, 1);
 
+        f_soul = new QLabel(gridLayoutWidget);
+        f_soul->setObjectName("f_soul");
+
+        gridLayout->addWidget(f_soul, 1, 0, 1, 1);
+
+        label_7 = new QLabel(gridLayoutWidget);
+        label_7->setObjectName("label_7");
+
+        gridLayout->addWidget(label_7, 0, 5, 1, 1);
+
+        label_4 = new QLabel(gridLayoutWidget);
+        label_4->setObjectName("label_4");
+
+        gridLayout->addWidget(label_4, 0, 2, 1, 1);
+
+        label_6 = new QLabel(gridLayoutWidget);
+        label_6->setObjectName("label_6");
+
+        gridLayout->addWidget(label_6, 0, 4, 1, 1);
+
         f_intelligence = new QLabel(gridLayoutWidget);
         f_intelligence->setObjectName("f_intelligence");
 
         gridLayout->addWidget(f_intelligence, 1, 5, 1, 1);
+
+        f_power = new QLabel(gridLayoutWidget);
+        f_power->setObjectName("f_power");
+
+        gridLayout->addWidget(f_power, 1, 2, 1, 1);
+
+        label_2 = new QLabel(gridLayoutWidget);
+        label_2->setObjectName("label_2");
+
+        gridLayout->addWidget(label_2, 0, 1, 1, 1);
+
+        label_13 = new QLabel(gridLayoutWidget);
+        label_13->setObjectName("label_13");
+
+        gridLayout->addWidget(label_13, 0, 6, 1, 1);
+
+        f_halt = new QLabel(gridLayoutWidget);
+        f_halt->setObjectName("f_halt");
+
+        gridLayout->addWidget(f_halt, 1, 6, 1, 1);
 
         lineEdit = new QLineEdit(SaveDialog);
         lineEdit->setObjectName("lineEdit");
@@ -150,10 +164,10 @@ public:
         gridLayout_2 = new QGridLayout(gridLayoutWidget_2);
         gridLayout_2->setObjectName("gridLayout_2");
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(gridLayoutWidget_2);
-        label_3->setObjectName("label_3");
+        c_level = new QLabel(gridLayoutWidget_2);
+        c_level->setObjectName("c_level");
 
-        gridLayout_2->addWidget(label_3, 0, 0, 1, 1);
+        gridLayout_2->addWidget(c_level, 1, 1, 1, 1);
 
         label_8 = new QLabel(gridLayoutWidget_2);
         label_8->setObjectName("label_8");
@@ -165,40 +179,35 @@ public:
 
         gridLayout_2->addWidget(label_9, 0, 1, 1, 1);
 
-        label_10 = new QLabel(gridLayoutWidget_2);
-        label_10->setObjectName("label_10");
+        c_speed = new QLabel(gridLayoutWidget_2);
+        c_speed->setObjectName("c_speed");
 
-        gridLayout_2->addWidget(label_10, 0, 4, 1, 1);
+        gridLayout_2->addWidget(c_speed, 1, 3, 1, 1);
 
         c_soul = new QLabel(gridLayoutWidget_2);
         c_soul->setObjectName("c_soul");
 
         gridLayout_2->addWidget(c_soul, 1, 0, 1, 1);
 
-        label_11 = new QLabel(gridLayoutWidget_2);
-        label_11->setObjectName("label_11");
-
-        gridLayout_2->addWidget(label_11, 0, 3, 1, 1);
-
         label_12 = new QLabel(gridLayoutWidget_2);
         label_12->setObjectName("label_12");
 
         gridLayout_2->addWidget(label_12, 0, 5, 1, 1);
 
-        c_level = new QLabel(gridLayoutWidget_2);
-        c_level->setObjectName("c_level");
+        label_3 = new QLabel(gridLayoutWidget_2);
+        label_3->setObjectName("label_3");
 
-        gridLayout_2->addWidget(c_level, 1, 1, 1, 1);
+        gridLayout_2->addWidget(label_3, 0, 0, 1, 1);
+
+        label_11 = new QLabel(gridLayoutWidget_2);
+        label_11->setObjectName("label_11");
+
+        gridLayout_2->addWidget(label_11, 0, 3, 1, 1);
 
         c_power = new QLabel(gridLayoutWidget_2);
         c_power->setObjectName("c_power");
 
         gridLayout_2->addWidget(c_power, 1, 2, 1, 1);
-
-        c_speed = new QLabel(gridLayoutWidget_2);
-        c_speed->setObjectName("c_speed");
-
-        gridLayout_2->addWidget(c_speed, 1, 3, 1, 1);
 
         c_live = new QLabel(gridLayoutWidget_2);
         c_live->setObjectName("c_live");
@@ -210,6 +219,21 @@ public:
 
         gridLayout_2->addWidget(c_intelligence, 1, 5, 1, 1);
 
+        label_10 = new QLabel(gridLayoutWidget_2);
+        label_10->setObjectName("label_10");
+
+        gridLayout_2->addWidget(label_10, 0, 4, 1, 1);
+
+        label_14 = new QLabel(gridLayoutWidget_2);
+        label_14->setObjectName("label_14");
+
+        gridLayout_2->addWidget(label_14, 0, 6, 1, 1);
+
+        c_halt = new QLabel(gridLayoutWidget_2);
+        c_halt->setObjectName("c_halt");
+
+        gridLayout_2->addWidget(c_halt, 1, 6, 1, 1);
+
 
         retranslateUi(SaveDialog);
 
@@ -220,32 +244,36 @@ public:
     {
         SaveDialog->setWindowTitle(QCoreApplication::translate("SaveDialog", "SaveDialog", nullptr));
         pushButton->setText(QCoreApplication::translate("SaveDialog", "\350\257\273\345\217\226\345\255\230\346\241\243", nullptr));
-        label->setText(QCoreApplication::translate("SaveDialog", "\351\255\202", nullptr));
-        label_4->setText(QCoreApplication::translate("SaveDialog", "\345\212\233\351\207\217", nullptr));
-        label_2->setText(QCoreApplication::translate("SaveDialog", "\347\255\211\347\272\247", nullptr));
-        label_6->setText(QCoreApplication::translate("SaveDialog", "\347\224\237\345\221\275\345\212\233", nullptr));
-        f_soul->setText(QString());
         label_5->setText(QCoreApplication::translate("SaveDialog", "\351\200\237\345\272\246", nullptr));
-        label_7->setText(QCoreApplication::translate("SaveDialog", "\346\231\272\345\212\233", nullptr));
+        label->setText(QCoreApplication::translate("SaveDialog", "\351\255\202", nullptr));
         f_level->setText(QString());
-        f_power->setText(QString());
         f_speed->setText(QString());
         f_live->setText(QString());
+        f_soul->setText(QString());
+        label_7->setText(QCoreApplication::translate("SaveDialog", "\346\231\272\345\212\233", nullptr));
+        label_4->setText(QCoreApplication::translate("SaveDialog", "\345\212\233\351\207\217", nullptr));
+        label_6->setText(QCoreApplication::translate("SaveDialog", "\347\224\237\345\221\275\345\212\233", nullptr));
         f_intelligence->setText(QString());
+        f_power->setText(QString());
+        label_2->setText(QCoreApplication::translate("SaveDialog", "\347\255\211\347\272\247", nullptr));
+        label_13->setText(QCoreApplication::translate("SaveDialog", "\346\270\270\346\210\217\346\214\202\350\265\267", nullptr));
+        f_halt->setText(QString());
         pushButton_2->setText(QCoreApplication::translate("SaveDialog", "\346\226\260\345\273\272\345\255\230\346\241\243\346\226\207\344\273\266", nullptr));
         pushButton_3->setText(QCoreApplication::translate("SaveDialog", "\345\206\231\345\205\245\345\255\230\346\241\243", nullptr));
-        label_3->setText(QCoreApplication::translate("SaveDialog", "\351\255\202", nullptr));
+        c_level->setText(QString());
         label_8->setText(QCoreApplication::translate("SaveDialog", "\345\212\233\351\207\217", nullptr));
         label_9->setText(QCoreApplication::translate("SaveDialog", "\347\255\211\347\272\247", nullptr));
-        label_10->setText(QCoreApplication::translate("SaveDialog", "\347\224\237\345\221\275\345\212\233", nullptr));
-        c_soul->setText(QString());
-        label_11->setText(QCoreApplication::translate("SaveDialog", "\351\200\237\345\272\246", nullptr));
-        label_12->setText(QCoreApplication::translate("SaveDialog", "\346\231\272\345\212\233", nullptr));
-        c_level->setText(QString());
-        c_power->setText(QString());
         c_speed->setText(QString());
+        c_soul->setText(QString());
+        label_12->setText(QCoreApplication::translate("SaveDialog", "\346\231\272\345\212\233", nullptr));
+        label_3->setText(QCoreApplication::translate("SaveDialog", "\351\255\202", nullptr));
+        label_11->setText(QCoreApplication::translate("SaveDialog", "\351\200\237\345\272\246", nullptr));
+        c_power->setText(QString());
         c_live->setText(QString());
         c_intelligence->setText(QString());
+        label_10->setText(QCoreApplication::translate("SaveDialog", "\347\224\237\345\221\275\345\212\233", nullptr));
+        label_14->setText(QCoreApplication::translate("SaveDialog", "\346\270\270\346\210\217\346\214\202\350\265\267", nullptr));
+        c_halt->setText(QString());
     } // retranslateUi
 
 };

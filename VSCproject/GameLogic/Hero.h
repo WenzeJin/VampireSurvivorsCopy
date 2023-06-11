@@ -93,6 +93,24 @@ public:
 
     void upgrade(int type);
 
+    [[nodiscard]] int getHpMax() const;
+
+    [[nodiscard]] int getHp() const;
+
+    [[nodiscard]] int getExp() const;
+
+    [[nodiscard]] int getExpMax() const;
+
+    [[nodiscard]] int getSpeed() const;
+
+    [[nodiscard]] double getReduce() const;
+
+    [[nodiscard]] const std::pair<double, double> &getRealPos() const;
+
+    int getDamage();
+    int getCD();
+
+
 private:
     void healthChange();
     void expChange();

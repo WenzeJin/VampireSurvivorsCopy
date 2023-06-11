@@ -52,7 +52,7 @@ public:
 
     void retranslateUi(QDialog *UpgradeDialog)
     {
-        UpgradeDialog->setWindowTitle(QCoreApplication::translate("UpgradeDialog", "\345\215\207\347\272\247\357\274\201", nullptr));
+        UpgradeDialog->setWindowTitle(QCoreApplication::translate("UpgradeDialog", "\345\215\207\347\272\247\357\274\201- \350\257\267\351\200\211\346\213\251\346\216\245\345\217\227\344\270\200\344\275\215\345\272\207\346\212\244", nullptr));
         choice1->setText(QString());
         choice2->setText(QString());
         choice3->setText(QString());

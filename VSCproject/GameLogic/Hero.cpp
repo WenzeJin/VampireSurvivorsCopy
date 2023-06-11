@@ -65,6 +65,17 @@ Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
     level = 1;
     EXP_MAX = HERO_INIT_EXP;
     widget_parent = w_parent;
+
+    if(GAME_HALT){
+        hp = HALT_HP;
+        HP_MAX = HALT_HPM;
+        exp = HALT_EXP;
+        EXP_MAX = HALT_EXPM;
+        level = GAME_LEVEL;
+        speed = HERO_SPEED;
+        reduce = HERO_REDUCE;
+    }
+
     hp_bar = new QProgressBar();
     exp_bar = new QProgressBar();
     hp_bar->setParent(widget_parent);
@@ -84,6 +95,10 @@ Hero::Hero(int hero_style, QWidget *w_parent, GameMap *m_parent) {
     map_parent = m_parent;
     real_pos.first = map_parent->getPosRangeX() * 0.5 - _image.width()*0.5;
     real_pos.second = map_parent->getPosRangeY() * 0.5 - _image.height()*0.5;
+    if(GAME_HALT){
+        real_pos.first = HERO_X;
+        real_pos.second = HERO_Y;
+    }
     real_rect.setWidth(_image.width());
     real_rect.setHeight(_image.height());
     real_rect.moveTo((int)real_pos.first,(int)real_pos.second);
@@ -266,6 +281,42 @@ void Hero::upgrade(int type) {
     exp = 0;
     level ++;
     expChange();
+}
+
+int Hero::getHpMax() const {
+    return HP_MAX;
+}
+
+int Hero::getHp() const {
+    return hp;
+}
+
+int Hero::getExp() const {
+    return exp;
+}
+
+int Hero::getExpMax() const {
+    return EXP_MAX;
+}
+
+int Hero::getSpeed() const {
+    return speed;
+}
+
+double Hero::getReduce() const {
+    return reduce;
+}
+
+const std::pair<double, double> &Hero::getRealPos() const {
+    return real_pos;
+}
+
+int Hero::getDamage() {
+    return _weapon->getDamage();
+}
+
+int Hero::getCD() {
+    return _weapon->getCD();
 }
 
 

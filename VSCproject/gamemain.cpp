@@ -8,6 +8,7 @@
 #include "ui_GameMain.h"
 #include <QString>
 #include <QPushButton>
+#include <iostream>
 #include "upgradedialog.h"
 #include "menu.h"
 #include "gameoverdialog.h"
@@ -57,6 +58,8 @@ void GameMain::initScene() {
     game->initMap(1);
     game->initHero(hero_type);
     game->initEnemy(1);
+    GAME_HALT = 0;
+    FIRST_RESUME = 0;
 }
 
 void GameMain::playGame() {

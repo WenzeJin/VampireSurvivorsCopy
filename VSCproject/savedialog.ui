@@ -46,41 +46,6 @@
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>魂</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>力量</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>等级</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="4">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>生命力</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="f_soul">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="3">
      <widget class="QLabel" name="label_5">
       <property name="text">
@@ -88,22 +53,15 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="5">
-     <widget class="QLabel" name="label_7">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>智力</string>
+       <string>魂</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
      <widget class="QLabel" name="f_level">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QLabel" name="f_power">
       <property name="text">
        <string/>
       </property>
@@ -123,8 +81,64 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="f_soul">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>智力</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>力量</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>生命力</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="5">
      <widget class="QLabel" name="f_intelligence">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="f_power">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>等级</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>游戏挂起</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="6">
+     <widget class="QLabel" name="f_halt">
       <property name="text">
        <string/>
       </property>
@@ -178,10 +192,10 @@
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_3">
+    <item row="1" column="1">
+     <widget class="QLabel" name="c_level">
       <property name="text">
-       <string>魂</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -199,10 +213,10 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="4">
-     <widget class="QLabel" name="label_10">
+    <item row="1" column="3">
+     <widget class="QLabel" name="c_speed">
       <property name="text">
-       <string>生命力</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -213,13 +227,6 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="3">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>速度</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="5">
      <widget class="QLabel" name="label_12">
       <property name="text">
@@ -227,22 +234,22 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="c_level">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_3">
       <property name="text">
-       <string/>
+       <string>魂</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>速度</string>
       </property>
      </widget>
     </item>
     <item row="1" column="2">
      <widget class="QLabel" name="c_power">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QLabel" name="c_speed">
       <property name="text">
        <string/>
       </property>
@@ -257,6 +264,27 @@
     </item>
     <item row="1" column="5">
      <widget class="QLabel" name="c_intelligence">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>生命力</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>游戏挂起</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="6">
+     <widget class="QLabel" name="c_halt">
       <property name="text">
        <string/>
       </property>
