@@ -50,6 +50,7 @@ class HeroDynamicWeapon : public Weapon{
     int CD;
     int cdn;
     GameState * _game;
+
 public:
     HeroDynamicWeapon(GameMap * map_p, Hero * user, int CD, unsigned bullet_style, int damage);
 
@@ -57,8 +58,8 @@ public:
 
     int getCD() override { return CD; }
     void upgrade() override;
-private:
 
+private:
     class TargetNotFoundError : public std::exception{
         int type;
     public:
